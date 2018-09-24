@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.3.4 Release - RuneLite</title><meta name="description" content="Smooth animations, easier HiScore lookups, and smarter Abyss runs"><meta name="author" content="Soy"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/main.a6c4659c.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" async="" src="/static/js/2.a12c216e.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="/static/js/35.8856fdee.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="Logo"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U"><i class="fab fa-discord"></i> Discord</a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient"><i class="fab fa-twitter"></i> Twitter</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite"><i class="fab fa-github"></i> GitHub</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li></ul></div></nav><div class="container" id="layout"><h1>1.3.4 Release</h1><p class="text-muted">6 months ago by Soy</p><hr><div class="markdown-body"><p>Animation smoothing is here to showcase the bleeding edge of oldschool visuals.
+Players, NPCs, and environmental objects can now be interpolated (or 'tweened')
+to animate at higher framerates. Thanks to
+<a href="https://github.com/DevDennis">@DevDennis</a> for bringing this eye candy to life.</p>
+<p><img src="/img/blog/1.3.4-Release/animsmoothing1.gif" alt="animsmoothing1">
+<img src="/img/blog/1.3.4-Release/animsmoothing2.gif" alt="animsmoothing2">
+<img src="/img/blog/1.3.4-Release/animsmoothing3.gif" alt="animsmoothing3"></p>
+<p>HiScore lookups can now be accessed from many more right-click menus, including
+in the chatbox, your friends list, from private messages, in the clan chat
+sidebar, and on the raiding party menu (for members with at least a kick-rank).
+<a href="https://github.com/Kamielvf">@Kamielvf</a> worked on this quality of life change,
+big thanks to him.</p>
+<p><img src="/img/blog/1.3.4-Release/lookups.png" alt="lookups"></p>
+<p>The Dark Mage in the Abyss can now be highlighted whenever your inventory
+contains a degraded pouch in need of repairs. Props to
+<a href="https://github.com/jaeger25">@jaeger25</a> for looking after our forgetful
+runecrafters.</p>
+<p><img src="/img/blog/1.3.4-Release/darkmage.png" alt="darkmage"></p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>Added healing values for 30+ missing foods; most importantly, easter eggs!</li>
+<li>Menu entry swapper: updated the Travel option to include balloons and
+Fremennik boats, and added a new Chase option for cats who love rat-hunting.
+Pickpocket swapping is now limited to H.A.M. members only, due to unintended
+thieving balance issues (eg. with blackjacking).</li>
+<li>Removed the Pyramid Plunder plugin because
+<a href="http://services.runescape.com/m=news/quality-of-life-improvements?oldschool=1">we don't need it any more</a>.
+Good Jagex.</li>
+<li>Renamed the Attack Indicators plugin to Attack Styles, and added better
+control over when the indicator appears.</li>
+<li>Added a toggle for displaying skilling session stats.</li>
+<li>Updated our overlay text to use the current oldschool font, complete with
+slashed 0's.</li>
+<li>Fixed several clue scroll helpers which pointed to wrong spots, suggested
+the wrong dance emote, or contained typos.</li>
+<li>Hunter plugin: fix bug related to setting traps and walking in the same tick.</li>
+<li>Fixed report button not returning to normal when the plugin was disabled.</li>
+<li>Fixed the bank tag search forgetting to match item placeholders.</li>
+<li>Fixed the screenshot plugin crashing on certain dialogs, like grabbing a
+hammer from a Motherlode crate.</li>
+</ul>
+<p>Enjoy!</p>
+<p>~ Soy</p>
+<h3 id="new-commits">New commits</h3>
+<p>We had 19 contributors this release!</p>
+<pre><code>Adam (15):
+      deobfuscator: add fernflower dependency
+      runescape-client: refactor item composition int2 -&gt; placeholderId
+      runescape-client: refactor item composition int3 -&gt; placeholderTemplateId
+      runelite-api: add idEquals to inventory item query
+      player indicators: add config for recoloring menu and showing clan rank
+      indicators plugin: fix not always identifying menus by type
+      runescape-client: item comp team -&gt; shiftClickIndex
+      runescape-client: item comp int1 -&gt; team
+      runescape-client: field3671 -&gt; params
+      runelite-client: remove old plugin classloader
+      runelite-client: remove old Plugin.file too
+      pluginmanager: don't store plugin enabled/disabled state in config
+      runescape-client: export hintArrowOffsetX/Y/Z
+      Add animation smoothing plugin
+      xp tracker plugin: don't throw from startUp if unable to fetch worlds
+
+Dennis (3):
+      runelite-api: expose item composition placeholder ids
+      runelite-client: fix bank tags search for placeholder items
+      runelite-client: only update the actions if the item id matches
+
+FatalWaffles (6):
+      Fixed typo for lighthouse clue
+      Fix mess hall emote clue
+      Fix "JIG" emote clues
+      Fix errors with emote clues (#1312)
+      Update worldpoint for map clue 2713
+      Fix manor, swamp and lumber yard clue wordpoints (#1356)
+
+Griffin Quarles (2):
+      Update README.md
+      Update CONTRIBUTING.md
+
+Jeremy Plsek (1):
+      itemprices plugin: fix noted items not showing ge
+
+Kamiel (3):
+      Reset report button text to default when plugin is disabled
+      Add HiScore lookup to right click menus
+      Update the runescape font to match current OSRS font
+
+Levi (1):
+      Average actions left between last 10 XP drops (#1323)
+
+Levi Schuck (2):
+      Lumbridge npcs have some bad compositions and return null in the dev
+      tools.
+      Reset XP on log-in of another character / mode
+
+Lotto (1):
+      cluescroll-plugin: remove duplicate anagram answers
+
+Matt Jaeger (1):
+      Highlight dark mage NPC in the center of the abyss when inventory
+      contains a degraded pouch
+
+Morgan Lewis (1):
+      Add small clarification to Account Plugin tooltip
+
+Rune Nielsen (2):
+      Fixed misspelling in clue and added missing clue (#1274)
+      Added UGTHANKI_KEBAB_1885 to itemstats plugin (#1263)
+
+Septron (2):
+      Add player index to api
+      Add hint arrows to api
+
+Seth (1):
+      skill sessions: Add a toggle for displaying session stats
+
+SoyChai (12):
+      Add healing values (+14) for pumpkins and easter eggs
+      itemstats: Add anchovies (+1), fruit battas (+11), and missing (sliced)
+      fruits (+2) including peaches (+8)
+      itemstats: Fix errant healing stats for sweetcorn variants
+      itemstats: Add Dorgeshuun foods with wiki-claimed healing values
+      itemstats: Add chocolatey milk (+4) and giant carp (+6)
+      banktags: Adjust dialog text to match Withdraw-X dialog
+      screenshot: Fix ArrayIndexOutOfBounds errors caused by unsafe parsing of
+      level-up widget
+      screenshot: Add documentation for primary methods
+      screenshot: Define more accurate method names and access levels
+      attackstyles: Rename Attack Indicators plugin to Attack Styles
+      attackstyles: Add a toggle to Always show style
+      attackstyles: Simplify config descriptions
+
+TheLonelyDev (1):
+      menu swapper: add Fly, Rellekka travel options, and Chase
+
+Tomas Slusny (4):
+      Save text configuration value on enter
+      Swap pickpocket only on H.A.M. members
+      Revert "Reset XP on log-in of another character / mode"
+      Remove pyramid plunder plugin
+
+WooxSolo (3):
+      Fix Actor.getWorldLocation to use pathX/pathY instead of getX/getY
+      Update game tick event to run after packets have been processed
+      hunter plugin: fix setting trap and walking at once
+
+psikoi (1):
+      Add a null check to avoid a NullPointerException when the query returns
+      null.
+</code></pre></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a></div></div></div></div><script type="text/javascript" src="/static/js/main.6904bbc0.js"></script></body></html>

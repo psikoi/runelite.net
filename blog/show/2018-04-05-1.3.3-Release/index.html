@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.3.3 Release - RuneLite</title><meta name="description" content="Bank tags, item shift click configuration, and improved player indicators"><meta name="author" content="Adam"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/main.a6c4659c.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" async="" src="/static/js/2.a12c216e.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="/static/js/36.fed12f0d.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="Logo"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U"><i class="fab fa-discord"></i> Discord</a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient"><i class="fab fa-twitter"></i> Twitter</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite"><i class="fab fa-github"></i> GitHub</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li></ul></div></nav><div class="container" id="layout"><h1>1.3.3 Release</h1><p class="text-muted">6 months ago by Adam</p><hr><div class="markdown-body"><p>Bank tags have been added, which allow tagging items in the bank which can later
+be searched on. Thanks to <a href="https://github.com/devdennis">@devdennis</a> for this,
+and <a href="https://github.com/abextm">@abextm</a> for the input dialog work.</p>
+<p><img src="/img/blog/1.3.3-Release/banktags.png" alt="banktags"></p>
+<p>You may now also customize the shift click option of any item in the inventory.
+Right click the inventory and select "Configure", then select the option on the
+item you want to use for shift click. Thanks to
+<a href="https://github.com/Kamielvf">@Kamielvf</a> for this!</p>
+<p><img src="/img/blog/1.3.3-Release/shiftclick.gif" alt="shiftclick"></p>
+<p>The player indicator plugin can now render players clan ranks next to their
+names and also show friends, teammates, and clan members in the right click menu.</p>
+<p><img src="/img/blog/1.3.3-Release/indicators.png" alt="indicators"></p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>Fix prayer reoder plugin not always reodering prayers since the last update</li>
+<li>Disable kingdom of misc plugin by default</li>
+<li>Add last destination for spiritual fairy tree to menu swapper plugin</li>
+<li>Allow configuring gp thresholds for ground items highlighting</li>
+<li>Add options to disable mouse tooltips on interfaces and in chatbox</li>
+<li>Fix nmz plugin informing you your absorption is low immediately after entering
+nmz</li>
+<li>Require shift to be held for npc tag option to be visibile</li>
+<li>Fix overlays drawing over the minimap area in fixed mode</li>
+<li>Move titlebar buttons to side bar when custom chrome is disabled</li>
+<li>Add option to enable the small font on all of the overlays</li>
+<li>Fix grounditems showing items as Members only when hopping from f2p to p2p</li>
+<li>Add fishing spots at Mount Quidamortem</li>
+<li>Add turquoise slayer helmet to the slayer plugin</li>
+</ul>
+<p>Enjoy!</p>
+<p>- Adam</p>
+<h3 id="new-commits">New commits</h3>
+<p>We had 11 contributors this release!</p>
+<pre><code>Adam (21):
+      cache: split color palette code into its own class
+      cache: add and compute hsl in underlay
+      cache: add and compute hsl in overlay
+      cache: add post to object loader
+      cache: rewrite map image dumper with logic from client
+      ground items overlay: use a loop
+      Add item layer changed event
+      ground items: use item layer changed event
+      Add maven-jar-plugin 3.0.2 to plugin management
+      overlay renderer: use copyonwritelist for overlays
+      overlay renderer: clip above scene and under widgets to viewport on fixed
+      perspective: use viewport offset in get2DGeometry
+      Revert "Merge pull request #1154 from deathbeam/team-member-names"
+      clanchat plugin: change cache to expire after write
+      Add clan member manager to cache clanmember ranks, use in clanchat plugin
+      Move clanmember icon logic to clanmanager
+      clanmanager: expose way to get bufferedimages for clan icons
+      player indicator overlay: render clan rank next to names
+      player indicators plugin: change color of menus
+      bank tag plugin: use chatbox input manager
+      Change MenuEntry type to int
+
+Dennis (7):
+      refactor method1721 to runWidgetOnLoadListener
+      fix widget loaded event
+      expose integer node fields
+      expose widget flags
+      expose widget actions
+      add show menu option nine widget config
+      add bank tags plugin
+
+Infinitay (1):
+      Disabled kingdom plugin by default, and it's options
+
+Kamiel (6):
+      Menu entry swapper: Swap last destination for spiritual fairy tree
+      runescape-client: export getShiftClickActionIndex
+      Add event for ItemComposition post()
+      Add shift click customization to menu swapper plugin
+      Add MenuOpened event
+      Change shift-click customization behaviour
+
+Max Weber (6):
+      ScriptEvent &gt; ScriptCallbackEvent
+      Expose methods to execute scripts
+      cache: Allow scripts to start with comments
+      Mixins: Give scripts a log.debug callback
+      Allow assembly and loading of new scripts
+      Add ChatboxInputManager to provide a RuneScape styled input box
+
+Morgan Lewis (4):
+      Add configuration options for ground item plugin
+      Add names from widgetInfo to the Widget Inspector
+      Add options to disable mouse tooltip on interfaces and chatbox
+      Fix challenge answer for Nurse Wooned clue
+
+Seth (6):
+      nmz plugin: reset absorption notification when not in NMZ
+      impling plugin: Move minimap overlay into it's own overlay
+      agility plugin: Add region check to lap counter
+      npc indicator: add shift right click to add tag option
+      agility plugin: remove duplicate gamestate event
+      ground item overlay: Fix boxes appearing very small with small font
+
+ShaunDreclin (2):
+      Fix capitalization of 'Black demon' in npc_health.json
+      Highlight current region in Location devtool
+
+Tomas Slusny (24):
+      Move loading of session before starting plugins
+      Move viewport check below gamestate and CTP
+      Save overlay data after resetting position
+      Move title toolbar buttons to sidebar in native
+      Improve ground items plugin
+      Color the hidden items gray when in highlight mode
+      Reduce the amount of temporary objects in items
+      Invalidate ground items cache properly
+      Invalidate item manager cache on hopping and login
+      Use provider for client in item manager
+      Add option for enabling small font
+      Add support for drawing player team's names
+      Add mappings and api for DMM player names
+      Use built-in name rendering in player indicators
+      Merge clan chat and player indicators plugin
+      Always remove tags from player.getName()
+      Add DMM name drawing opcodes to cache
+      Add clan changed hook
+      Properly invalidate clan ranks and names
+      Add clan changed hook
+      Add support for drawing player team's names
+      Add mappings for DMM player names
+      Add raids fishing spot
+      Cache all ground items and then check their state
+
+WooxSolo (1):
+      Add chunk borders and map square borders to devtools
+
+rune3132 (1):
+      Added the turquoise slayer helmet to the slayer plugin
+</code></pre></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a></div></div></div></div><script type="text/javascript" src="/static/js/main.6904bbc0.js"></script></body></html>

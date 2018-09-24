@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.4.10 Release - RuneLite</title><meta name="description" content="Loot tracker, minnows overlay, prayer bar flick helper and bug fixes"><meta name="author" content="Tomas"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/main.a6c4659c.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" async="" src="/static/js/2.a12c216e.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="/static/js/15.2db25d19.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="Logo"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U"><i class="fab fa-discord"></i> Discord</a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient"><i class="fab fa-twitter"></i> Twitter</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite"><i class="fab fa-github"></i> GitHub</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li></ul></div></nav><div class="container" id="layout"><h1>1.4.10 Release</h1><p class="text-muted">2 months ago by Tomas</p><hr><div class="markdown-body"><p>A loot tracker plugin has been added which will be able to track your loot from:</p>
+<ul>
+<li>Monsters</li>
+<li>Bosses (like Vorkath and Zulrah)</li>
+<li>Clue scrolls</li>
+<li>Chambers of Xeric</li>
+<li>Theatre of Blood</li>
+<li>Barrows Brothers</li>
+<li>Players you PK (!)</li>
+</ul>
+<p>For now, all these data will be tracked only per-session and not persisted and there is only per-kill view,
+but we are planning to extend both these areas in future. This plugin is disabled by default, so make sure
+to enable it in settings under <strong>Loot tracker</strong>.</p>
+<p>This feature is result of hard work of <a href="https://github.com/WooxSolo">@WooxSolo</a>, <a href="https://github.com/Adam-">@Adam-</a>,
+<a href="https://github.com/TheStonedTurtle">@TheStonedTurtle</a> and <a href="https://github.com/Psikoi">@Psikoi</a>, so thank you all for
+your great work on it:</p>
+<p><img src="/img/blog/1.4.10-Release/loottracker1.png" alt="loottracker1">
+<img src="/img/blog/1.4.10-Release/loottracker2.png" alt="loottracker2">
+<img src="/img/blog/1.4.10-Release/loottracker3.png" alt="loottracker3">
+<img src="/img/blog/1.4.10-Release/loottracker4.png" alt="loottracker4"></p>
+<p>Support for minnows timers has been added to the Fishing plugin which displays a countdown until the minnow spot will
+move. Thanks to <a href="https://github.com/jkybtw">@jkybtw</a> who contributed this feature.</p>
+<p><img src="/img/blog/1.4.10-Release/minnows.png" alt="minnows"></p>
+<p>The flicking helper in Prayer plugin has been extended to also display in prayer bar, if it is enabled, thanks to
+<a href="https://github.com/forsco">@forsco</a>:</p>
+<p><img src="/img/blog/1.4.10-Release/prayerbarflick.gif" alt="prayerbarflick"></p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>Ungael (Vorkath) obstacles has been added to agility plugin</li>
+<li>Meyerditch obstacles has been added to agility plugin</li>
+<li>Fairy ring clues will now warn about missing spade from inventory</li>
+<li>Lumbridge swamp emote clue now shows correct location</li>
+<li>Loading of window sidebar has been fixed, now it should not mysteriously disappear anymore</li>
+<li>Dig location for Barbarian Villag Hot&amp;Cold clue is now correct</li>
+<li>Idle notifier now notify on crafting leather idle</li>
+<li>Requirement for slaying an Abyssal Demon corrected in Achievement Diary
+plugin</li>
+<li>Fix tile overlay height when highlighting a tile next to the edge of a bridge</li>
+<li>Add config for whether the killcount command is enabled</li>
+<li>Fix minimap overlay dot overlay being slightly off</li>
+<li>Crafting leather has been added to the idle notifier</li>
+</ul>
+<p>Enjoy!</p>
+<p>~ Tomas</p>
+<h3 id="new-commits">New commits</h3>
+<p>We had 18 contributors this release!</p>
+<pre><code>Adam (12):
+      perspective: fix worldToCanvas to convert from local to scene coords correctly
+      Revert "perspective: fix worldToCanvas to convert from local to scene coords correctly"
+      perspective: use less magic constants in getTileHeight
+      Revert "perspective: fix regression caused by 2599db2"
+      perspective: split tile height logic out of local to world
+      perspective: fix getCanvasTileAreaPoly when getting tile next to a bridge
+      perspective: fix checkstyle
+      runelite-mixins: correct worldToCanvas arguments
+      perspective: change worldToMinimap location calculation back
+      fishing plugin: add minnows overlay
+      fishing plugin: add position to config
+      Add LootManager
+
+Devin (1):
+      kourend library plugin: Use correct enum naming convention
+
+Jacob McElroy (1):
+      Fix dig location of the West Barbarian Village H/C clue (#4524)
+
+Jaimy Smets (1):
+      Add alternative dragon pickaxes to emote clue
+
+Jordan Atwood (23):
+      item charge plugin: Use constant for checked string
+      timers plugin: Use constants for checked strings
+      Add color utility class
+      notifier: Use ColorUtil functions
+      chat message manager: Use ColorUtil functions
+      widget menu option: Use ColorUtil functions
+      achievement diary plugin: Use ColorUtil functions
+      boosts plugin: Use ColorUtil functions
+      friend notes plugin: Use ColorUtil functions
+      ground items plugin: Use ColorUtil functions
+      inventory tags plugin: Use ColorUtil functions
+      item prices plugin: Use ColorUtil functions
+      item stats plugin: Use ColorUtil functions
+      menu entry swapper plugin: Use ColorUtil functions
+      player indicators plugin: Use ColorUtil functions
+      puzzle solver plugin: Use ColorUtil functions
+      rune pouch plugin: Use ColorUtil functions
+      slayer plugin: Use ColorUtil functions
+      achievement diary plugin: Fix Abyssal demon req
+      achievement diary plugin: Fix Belladonna farming req
+      achievement diary plugin: Fix waka canoe requirement
+      clues: Fix Lumbridge swamp cave emote clue location
+      agility: Add Ungael obstacles
+
+Juul Damen (1):
+      Add missing killcount command config (#4489)
+
+Kristian Welsh (1):
+      overlay util: adjust renderMinimapLocation for newer worldToMinimap
+
+Magic fTail (3):
+      TimerPlugin: Fix prayer enhance length
+      Clarify wording of default log tracker message (#4602)
+      Fix Theatre Of Blood InventoryID (#4608)
+
+Max Weber (5):
+      mixins: Prevent runScript from being called recursively
+      runelite-client: Rename ClientThread::invokeLater to invoke
+      runelite-client: Always call done after changed in ChatboxInptutManager
+      fairyring: Always run scripts outside of chatbox input callbacks
+      runelite-client: Make hotkeys run on KeyPressed
+
+Michael Goodwin (3):
+      Add Chambers Of Xeric and TOB inventories
+      Add TOB varbits
+      Add TOB widget ids
+
+Mitch Barnett (1):
+      Add Meyerditch to agility obstacles (#4538)
+
+Su-Shing Chen (1):
+      Fix Assembler tests when autocrlf=true on Windows
+
+Tomas Slusny (12):
+      Fix loading of chat colors on startup
+      Use consistent API and order for title and sides
+      Add isTab property to title buttons
+      Merge PluginToolbar and TitleToolbar together
+      Add simple info log with startup time
+      Properly use javax.inject.Provider
+      Pack and show frame only after properties update
+      Fix NPE when trying to draw null names
+      Add null check for Perspective.getCanvasTextLoc
+      Account for plane in TileObject canvas location
+      Fix FontManagerTest package
+      Fix getCanvasTileAreaPoly ArrayOutOfBounds
+
+WooxSolo (1):
+      Add NPC death animations
+
+aquivers (1):
+      Add spade requirement reminder to fairy ring clues (#4585)
+
+forsco (1):
+      Add flick helper to player bar (#3882)
+
+psikoi (1):
+      Add loot tracker plugin
+
+rswindows10 (2):
+      Add support for crafting leather idle notification (#4600)
+      Remove comment regarding crafting leather (#4601)
+</code></pre></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a></div></div></div></div><script type="text/javascript" src="/static/js/main.6904bbc0.js"></script></body></html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.2.18 Release - RuneLite</title><meta name="description" content="New grand exchange plugin, pyramid plunder plugin, and the cannon plugin now shows NPC double-hit spots"><meta name="author" content="Adam"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/main.a6c4659c.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" async="" src="/static/js/2.a12c216e.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="/static/js/41.455f054a.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="Logo"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U"><i class="fab fa-discord"></i> Discord</a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient"><i class="fab fa-twitter"></i> Twitter</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite"><i class="fab fa-github"></i> GitHub</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li></ul></div></nav><div class="container" id="layout"><h1>1.2.18 Release</h1><p class="text-muted">7 months ago by Adam</p><hr><div class="markdown-body"><p>A grand exchange plugin has been added by
+<a href="https://github.com/someonewithaninternetconnection">@Someonewithaninternetconnection</a>.
+It shows your current grand exchange offers and their progress:</p>
+<p><img src="/img/blog/1.2.18-Release/ge.png" alt="ge"></p>
+<p><a href="https://github.com/NotFoxtrot">@NotFoxtrot</a> contributed a pyramid plunder plugin which uses a less obtrusive interface:</p>
+<p><img src="/img/blog/1.2.18-Release/pp.png" alt="pp"></p>
+<p>Finally, the cannon plugin was extended by <a href="https://github.com/SemtexError">@SemtexError</a> to show the NPC double-hit spots:</p>
+<p><img src="/img/blog/1.2.18-Release/cannon.png" alt="cannon"></p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>TzTok-Jad overlay is now shown for the whole fight duration</li>
+<li>The puzzle solver now displays the fastest solution</li>
+<li>Add Dorgesh-Kaan and Brimhaven agility arenas to the agility plugin</li>
+<li>Show skill details on hover instead of click in the hiscore panel</li>
+<li>Maniacal monkeys have been added to the hunter plugin</li>
+<li>Hunter plugin was improved to be more accurate, and catch rate overlay was removed</li>
+<li>Fullscreen support has been added for OSX</li>
+<li>Achievement diary plugin has been removed in favour of new OSRS achievement diary interface</li>
+<li>World map has been fixed, no more increased memory consumption after it is closed</li>
+<li>Positive and negative boosts are now properly colored when using absolute boosts</li>
+<li>Cannonball plugin now supports unloading</li>
+</ul>
+<p>Enjoy!</p>
+<p>- Adam</p>
+<h3 id="new-commits">New commits</h3>
+<p>We had 15 contributors this release!</p>
+<pre><code>Adam (16):
+      overlay renderer: remove unnecessary lambda which makes it hard to profile
+      xtea service: fix get() query to join on id
+      Revert "xtea service: fix get() query to join on id"
+      xtea service:try to fix query again
+      runescape-client: refactor WorldMapManager
+      runescape-api: import world map data
+      runelite-api: expose world map data
+      Garbage collect world map once closed
+      menu manager: add method to remove player menu items
+      hiscore plugin: remove player option on shutdown
+      hiscore plugin: add config for player option
+      text component: allow color tags
+      boosts overlay: show boosts in color
+      attack indicator plugin: process hidden styles on startup/shutdown and config changes
+      mixin injector: fall back to method name if no deobfuscated name is found
+      Add support for intercepting mouse and keyboard input
+
+Devin (1):
+      Change TzTok-Jad overlay to be persistent
+
+Hexagon (1):
+      Use the address returned by the worldlist api instead of building our own
+
+Joshua Filby (1):
+      runescape-client: set the close operation for running deob client to exit on close
+
+Kamiel (6):
+      Fix minor issues
+      Add ability to set custom colors
+      Fix overlays not being rendered
+      Follow java coding conventions
+      Use normal font weight for input field
+      Fix panel expanding inconsistency (#464)
+
+Lotto (21):
+      grounditems: offset text on z axis
+      puzzlesolver: add IDA* + manhattan distance solver
+      puzzlesolver: don't spit out exceptions when the puzzle is finished
+      puzzlesolver: use the new solver and display Solving.. + Solved! msgs
+      puzzlesolver: update the test to use the new solver
+      puzzlesolver: add an option to draw dots instead of arrows
+      puzzlesolver: fix solution being reset when clicking the puzzle quickly
+      puzzlesolver: remove bounds check from PuzzleSolver#getStep
+      Fix Widget#isHidden returning incorrect state when parent is null
+      Add grand exchange support to InventoryWidgetItemQuery
+      Add varbit for multicombat area
+      opponentinfo: display the name of the target of your target
+      examineplugin: only capture menuactions with the option "Examine"
+      notifier: add option to disable notification sounds
+      Add guide prices support to InventoryWidgetItemQuery
+      Add equipment window support to InventoryWidgetItemQuery
+      modelmixin: use verticesCount/trianglesCount instead of array lengths
+      agilityplugin: add support for Dorgesh-Kaan
+      agilityplugin: add support for Brimhaven
+      hiscoreplugin: show skill details on hover instead of click
+      runelite-client: remove diary progress plugin
+
+Max Weber (30):
+      cameraPitch &gt; cameraPitchCopy
+      field885 &gt; cameraPitch
+      method2995 &gt; buildVisibilityMaps
+      zoom plugin: Add option to relax the camera's upper pitch limit.
+      cache: Add get_is_mobile opcode.
+      cameraPitch &gt; cameraPitchTarget
+      cameraPitchCopy &gt; cameraPitch
+      method565 &gt; drawMapIcons
+      method564 &gt; drawMapRegion
+      field3927 &gt; worldMapX
+      field3944 &gt; worldMapY
+      field3947 &gt; worldMapZoom
+      field3948 &gt; worldMapZoomTarget
+      method385 &gt; drawFlashingMapIcons
+      method406 &gt; drawMapLinks
+      method402 &gt; drawNonLinkMapIcons
+      class39 &gt; MapIcon
+      method4375 &gt; bitpack
+      class47 &gt; MapIconReference
+      field3406 &gt; id
+      field488 &gt; areaId
+      field556 &gt; areaId
+      field3788 &gt; scriptMapIconReference
+      class33 &gt; MapLabel
+      field433 &gt; fontSize
+      field3935 &gt; mapFonts
+      field515 &gt; mapFonts
+      field450 &gt; mapFonts
+      method648 &gt; popcnt
+      field431 &gt; text
+
+NotFoxtrot (2):
+      Add Pharaoh's sceptre to the jewellery count
+      Add new overlay for Pyramid Plunder
+
+Seth (5):
+      boss timers: replace resource image with itemID images
+      boss timers: add tooltips
+      boss timers: add chaos elemental
+      image component: fix images being off-centered
+      poh plugin: Remove unnecessary toggles
+
+SomeoneWithAnInternetConnection (4):
+      Expose isStackable on ItemComposition objects
+      Rename progress to state in GrandExchangeOffer
+      runelite-api: Add Grand Exchange offer support
+      Create Grand Exchange plugin
+
+Tomas Slusny (9):
+      Prevent throwing duplacite events for GameObject
+      Add support for maniacal monkeys to hunter plugin
+      Add default timeout to notify-send on Linux
+      Rename "Low memory" to "Low detail" plugin
+      Fix crash in ClienUI configChanged event
+      Fix NPE in minimap plugin
+      Remove animation checks
+      Remove catch rate overlay
+      Remove inSequence import b/c problems with mapping
+
+XrioBtw (1):
+      Add missing cancel menu action
+
+arlyon (2):
+      runelite-client: split ostype into its own utility
+      runelite-client: enable fullscreen on osx
+
+l2- (1):
+      Xp orb fixes (#689)
+
+semtexerror (4):
+      cannon plugin: support unloading cannon
+      cannon plugin: cleanup
+      cannon plugin: add overlay for cannonballs left
+      cannon plugin: draw npc double hit spots
+</code></pre></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a></div></div></div></div><script type="text/javascript" src="/static/js/main.6904bbc0.js"></script></body></html>

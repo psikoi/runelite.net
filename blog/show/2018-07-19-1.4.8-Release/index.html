@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.4.8 Release - RuneLite</title><meta name="description" content="Fairy Ring search, XP tracker pausing and RoW !kc support"><meta name="author" content="Adam"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/main.a6c4659c.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" async="" src="/static/js/2.a12c216e.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="/static/js/17.be13c7b7.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="Logo"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U"><i class="fab fa-discord"></i> Discord</a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient"><i class="fab fa-twitter"></i> Twitter</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite"><i class="fab fa-github"></i> GitHub</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li></ul></div></nav><div class="container" id="layout"><h1>1.4.8 Release</h1><p class="text-muted">2 months ago by Adam</p><hr><div class="markdown-body"><p>You can now filter through the Fairy Ring travel log while having the <code>configure</code> interface open. (Contributed by <a href="https://github.com/Abextm">@Abextm</a>)</p>
+<p><img src="/img/blog/1.4.8-Release/fairy-ring-filter.png" alt="fairy-ring-filter"></p>
+<p>The XP tracker now can be paused either on logout or after a configurable time period. (Contributed by <a href="https://github.com/LeviSchuck">@LeviSchuck</a>)</p>
+<p><img src="/img/blog/1.4.8-Release/xp-tracker-pause.png" alt="xp-tracker-pause"></p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>Reading the Ring of Wealth boss log now updates the !kc command kill counts</li>
+<li>Theatre of Blood rewards are now automatically screenshotted</li>
+<li>Hunter level-ups are now properly screenshotted</li>
+<li>Screenshots taken in Deadman mode now reside in separate directory</li>
+<li>The King percival clue now also contains informations about nearest fairy ring</li>
+<li>Added Mounted Mythical Cape to the skill calculator</li>
+<li>Fix slayer plugin sometimes highlighting nonexistent NPCs</li>
+<li>Fix bug with ground items not always showing ground items</li>
+<li>Cacti in farming plugin now work correctly</li>
+<li>Untradeable versions of Sanguinesti Staff and Scythe now calculate GE value correctly</li>
+<li>Fix alignment of xpdrops when sprites are configured to be hidden</li>
+<li>Fix hiscore autocomplete when typing too quickly</li>
+</ul>
+<p>Enjoy!</p>
+<p>- Adam</p>
+<h3 id="new-commits">New commits</h3>
+<pre><code>Adam (28):
+      Revert "command manager: post events to immediate eventbus"
+      Revert "plugin manager: register plugins with immediate event bus"
+      Revert "runelite-client: add immediate event bus"
+      Add chatbox input listener and use for chatbox input event
+      slayer plugin: fix parsing points and streaks with commas
+      chat commands: add test
+      chat commands: loosen regex for boss names
+      runelite-scripts: add bank search script
+      Add matches found to bank tag search dialog message
+      chat commands: count barrows chests too
+      screenshot plugin: move level up and quest screenshots to after widget load
+      screenshot plugin: rename "raids" to "chambers of xeric"
+      screenshot plugin: fix hunter level up screenshots
+      config invocation handler: don't set config values if already set
+      hiscore plugin: fix race with inserting next character with autocomplete
+      slayer plugin: clear highlighted targets on login
+      ground items: scan entire scene for items not just ones within range
+      Add item spawn events
+      grounditems: rewrite to use item spawn events
+      region tile manager: send item spawns at plugin start
+      agility plugin: use item events
+      mta plugin: use item events
+      Remove item layer changed event
+      Remove MAZE_GUARDIAN_MOVING npc id
+      prayer plugin: update zamorak robe itemids
+      xp drop plugin: fix alignment of xpdrops when hiding skill icons
+      xp drop plugin: add positions for config
+      Add item despawn events when ground items is nulled
+
+Aquivers (1):
+      Add fairy ring information to King Percival clue #4344
+
+JHPinto (1):
+      Slayer overlay use query idEquals, use consts (#4322)
+
+Jordan (1):
+      timers plugin: Use item and sprite IDs for timers
+
+Jordan Atwood (5):
+      screenshot plugin: Use separate directory for DMM
+      text: Fix removeTags for isolated &lt; and &gt; chars
+      timers plugin: Reduce visibilities
+      Remove freeze timer on Vorkath Zombified spawn death
+      clue scroll plugin: Remove useless null check
+
+Levi Schuck (2):
+      Add dimming UI to progress bar
+      Add feature to pause skill timers on logout or after idle period
+
+Magic fTail (5):
+      Update dialog widget ids from game update
+      chat commands: add raids pattern
+      ScreenshotPlugin: fix naming of event
+      chat commands: update boss kc from boss log
+      screenshot plugin: capture ToB rewards
+
+Max Weber (8):
+      farmingtracker: Fix cactus implementation
+      cache: Relax label name constraints
+      Rename Region to Scene
+      runelite-api: Update autogenerated ID files to 171-7
+      runelite-client: Allow ChatboxInputManager to callback early
+      Add API to create new widgets
+      runelite-client: Add fairy ring search to fairy ring plugin
+      devtools: Show index on dynamic widgets in the tree
+
+Qatell (1):
+      Fixed objects of variable width and length from being positioned incorrectly on the map.
+
+Tomas Slusny (5):
+      Remove investigate menu entry swap
+      Add Sanguinesti Staff to ItemMapping
+      Add mapping for Scythe to ItemMappings
+      Remove unused import from RSTileMixin
+      Fix camels type in varrock museum quiz
+
+Tyler Hardy (1):
+      runelite-api: Add/Correct fairy ring panel widgets
+
+forsco (1):
+      Add mythical cape and teak kitchen table to skill calc (#4341)
+</code></pre></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a></div></div></div></div><script type="text/javascript" src="/static/js/main.6904bbc0.js"></script></body></html>

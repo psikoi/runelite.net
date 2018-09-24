@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.3.7 Release - RuneLite</title><meta name="description" content="Farming plugin, demonic gorilla plugin, and cerberus plugin"><meta name="author" content="Adam"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/main.a6c4659c.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" async="" src="/static/js/2.a12c216e.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="/static/js/32.911217d6.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="Logo"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U"><i class="fab fa-discord"></i> Discord</a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient"><i class="fab fa-twitter"></i> Twitter</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite"><i class="fab fa-github"></i> GitHub</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li></ul></div></nav><div class="container" id="layout"><h1>1.3.7 Release</h1><p class="text-muted">5 months ago by Adam</p><hr><div class="markdown-body"><p>This release adds a farming tracker plugin, which keeps track of what time your
+crops were planted and will notify you after a time when it would be fully
+grown. Thanks to <a href="https://github.com/abextm">@abextm</a> and
+<a href="https://github.com/NotFoxtrot">@NotFoxtrot</a> for their work on this over the
+last few weeks.</p>
+<p><img src="/img/blog/1.3.7-Release/farming.png" alt="farming"></p>
+<p><a href="https://github.com/wooxsolo">@WooxSolo</a> contributed a demonic gorilla plugin,
+which counts the attacks against you so you can tell when it will switch attack
+styles. After it switches, the new style is displayed.</p>
+<p><img src="/img/blog/1.3.7-Release/gorillas.png" alt="gorillas"></p>
+<p>A Cerberus plugin has been added, from
+<a href="https://github.com/deathbeam">@deathbeam</a> which shows the ghost order.</p>
+<p><img src="/img/blog/1.3.7-Release/cerberus.png" alt="cerberus"></p>
+<p>Also, a special thanks to Brandon Kase, FatalWaffles, Jordan Atwood, Maiddog,
+NotFoxtrot, and Rprrr for continuing to correct and update the clues.</p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>The cannonball count plugin tracks the count correctly again</li>
+<li>The side toolbar can now be hidden via a button in the menu bar, or ctrl+f11</li>
+<li>There is now a toggle for highlighting agility shortcuts</li>
+<li>A vengeance other timer has been added</li>
+<li>The XP orbs stay on screen while hovered</li>
+<li>Third age tools added to idle notifier</li>
+<li>XP tracker "actions left" no longer rounds down, and doesn't get confused by
+hopping accounts anymore</li>
+<li>Screenshots can now be taken with the "insert" key</li>
+<li>Add ability to disable low HP and prayer notifications</li>
+<li>Add skill progress bar to hiscore panel</li>
+<li>Add stat change indicator to boosts plugin when indicators are selected</li>
+</ul>
+<p>Enjoy!</p>
+<p>- Adam</p>
+<h3 id="new-commits">New commits</h3>
+<p>We had 25 contributors this release!</p>
+<pre><code>Adam (22):
+      update check: set read timeout on socket, move off of request thread
+      item controller: remove all synchronous fetching
+      item service: move overflow of pending lookups log message to debug
+      ws service: optimize session storage
+      Revert "Fix cannon cannonball count"
+      runelite: fix check for client before requesting itemmanager
+      runelite: add --disable-update-check
+      account service: fix not setting autoincrement on user id
+      runescape-client: export changedSkills and changedSkillsCount
+      runelite-api: add VisibleForDevtools annotation for methods only visible for use in devtools
+      devtools: add addxp
+      runelite-api: add headicon enum
+      demonic gorilla plugin: use headicon api
+      http-service: fix sql2o statement leak
+      Add maven-compiler-plugin to plugin management
+      devtools: post xp changed event too
+      runescape-client: export world map related symbols
+      Use only southermost ghost wave for cerb plugin
+      scripts: update comand script from live
+      scripts: update options panel rebuilder from live
+      scripts: apply zoom limits to options panel rebuilder
+      scripts: apply command callback to command script
+
+Brandon Kase (2):
+      Adjust stomp dragon-axe clue location
+      Add missing comma to hard cryptic
+
+Dennis (1):
+      fix prayer reorder shutdown
+
+FatalWaffles (1):
+      Fix Beckon in Digsite location
+
+Grant (1):
+      Add Agility shortcut highlight toggle
+
+Hydrox6 (2):
+      Add Vengeance Other indicator
+      Reorder Timer configuration options
+
+Jeroen (1):
+      XpGlobe now stays on screen while hovered over it.
+
+Jordan (1):
+      Add Zeah Altar elite map clue (#2283)
+
+Jordan Atwood (5):
+      Add missing Pyramid emote clue item
+      Fix Shayzien command tent emote clue
+      Fix hard cryptic clue
+      Allow "degree" and "minute" in coordinate clues
+      Use British floor numbering in clue scroll hints
+
+Kamiel (6):
+      Expose Actor animation and actionFrame to API
+      Add anim command to developer tools
+      Expose Actor graphic and spotAnimFrame to API
+      Add gfx command to developer tools
+      Add logger command to change the logger level
+      Add 3rd Age Axe and 3rd Age Pickaxe animations to Idle Notifier
+
+Levi (2):
+      Refactor overlay renderer screenshot code into a draw manager
+      xp tracker: rewrite tracking datastructures
+
+Lotto (1):
+      cluescrolls: support any type of ring of dueling in emote clues
+
+Maiddog (3):
+      clues: fix spotted cape not being detected
+      clues: change npc name check to nameEquals
+      Fix various clue objects and locations.
+
+Mantautas Jurksa (1):
+      Fix master fire cape emote clue
+
+Marcus Heine (1):
+      Enable screenshotting with INSERT
+
+Max Weber (17):
+      Initialize ItemManager to a complete state
+      Allow ClientThread to re-run invokeLater-ed methods
+      Allow ItemManager to be ran off the client thread
+      Use ItemManager in KourendLibraryPlugin
+      Use ItemManager in GrandExchangePlugin
+      cache: Name ObjectDefiniton's varpID and configID correctly
+      Add various animation IDs
+      Add UsernameChanged event
+      Add WorldPoint::getRegionID
+      Allow PluginPanels to opt-out of the scrollbar
+      Add FarmingTracker plugin
+      configmanager: Allow multiple delimiters
+      Add missing U+00A0 NO-BREAK SPACE character
+      Rename Setting to VarPlayer
+      Merge Varcs into Client::getVar
+      Rename SettingsTracker
+      farmingtracker: Prevent saving when teleporting
+
+Morgan Lewis (1):
+      Add support for mapping parameter names
+
+NotFoxtrot (2):
+      Fix cryptic elite clue: Father Aereck
+      Fix master clue emote: Entrana church
+
+Reasel (1):
+      Add ability to disable HP and Prayer notifications (#2007)
+
+Rprrr (2):
+      screenshot plugin: fix exception when taking screenshots on login
+      Fixes #2146 (Brother Tranquility 'talk-to' &amp; ''transport' option swap w/Menu Swapper plugin)
+
+Samuel Beresford (1):
+      Adds skill progress bar to hiscore panel Matches existing progress bar (look&amp;feel) as xp tracker
+
+Seth (6):
+      boosts overlay: move next change text to display at the top
+      boosts plugin: Add stat change indicator when indicators are selected
+      opponent info: reduce padding size
+      clue scroll: add toggle for hint arrows
+      clue scroll: fix easy clue
+      farming panel: reset progress bar background
+
+SoyChai (5):
+      Correct misspellings of "transparent"
+      Add underscores to minigame names in WidgetInfo
+      agilityplugin: Rename plugin package to agility
+      reportbutton: Double frequency of time updates to avoid skipping seconds
+      discord: Display skill icons in Discord while training
+
+Tomas Slusny (10):
+      Agility plugin small code cleanup
+      Do not draw text on top of Mark Of Grace
+      Add support for hiding the sidebar
+      Fix clue requiring platebody, but wanting legs
+      Remove unused imports in ClientUI (#2061)
+      Reset clues based on item ID
+      Reset clue on unknown clues
+      Add Cerberus plugin
+      Verify game's minimum size
+      Add mappings for currentLoginField
+
+WooxSolo (12):
+      Add rectangle support to config
+      Remember screen position after closing and reopening
+      Add ability to lock client to screen
+      runescape-client: export hitsplatValues and applyActorHitsplat
+      runelite-api: add hitsplat applied event
+      runelite-api: export collision data
+      runelite-api: add line of sight algorithm
+      runelite-api: add WorldArea
+      devtools: add line of sight and valid moves
+      Add demonic gorilla plugin
+      cannon plugin: fix cannonball count when loading and firing on the same tick
+      cannon plugin: add granite cannonball to unload check
+
+oplosthee (1):
+      Add toggle for drawing overhead player names to PlayerIndicators plugin
+
+u6077743 (1):
+      Improved low hp notif. by considering nmz absorption, 2210
+</code></pre></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a></div></div></div></div><script type="text/javascript" src="/static/js/main.6904bbc0.js"></script></body></html>

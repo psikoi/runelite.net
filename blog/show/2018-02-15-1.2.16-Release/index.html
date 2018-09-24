@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.2.16 Release - RuneLite</title><meta name="description" content="New puzzle box solver, barrows plugin, and NMZ plugin!"><meta name="author" content="Tomas"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/main.a6c4659c.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" async="" src="/static/js/2.a12c216e.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="/static/js/43.8153f826.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="Logo"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U"><i class="fab fa-discord"></i> Discord</a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient"><i class="fab fa-twitter"></i> Twitter</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite"><i class="fab fa-github"></i> GitHub</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li></ul></div></nav><div class="container" id="layout"><h1>1.2.16 Release</h1><p class="text-muted">7 months ago by Tomas</p><hr><div class="markdown-body"><p>An awesome puzzle box plugin has been finally added to RuneLite thanks to work of
+<a href="https://github.com/UniquePassive">@UniquePassive</a>. Clues are now even easier to do!</p>
+<p><img src="/img/blog/1.2.16-Release/puzzlebox1.png" alt="puzzlebox1"></p>
+<p><img src="/img/blog/1.2.16-Release/puzzlebox2.png" alt="puzzlebox2"></p>
+<p>For everyone who likes to AFK, thanks to <a href="https://github.com/Fire-Proof">@Fire-Proof</a>
+a Nightmare Zone plugin was added. It shows your current Nightmare Zone points in nice
+RuneLite custom overlay, notifies you when you are low on absorption, and when your
+overload runs out.</p>
+<p><img src="/img/blog/1.2.16-Release/nmz.png" alt="nmz"></p>
+<p>Barrows helper has been added in a new Barrows plugin by <a href="https://github.com/Sethtroll">@Sethtroll</a>.
+No more black minimap when in tunnels or finding the correct doors!</p>
+<p><img src="/img/blog/1.2.16-Release/barrows1.png" alt="barrows1"></p>
+<p><img src="/img/blog/1.2.16-Release/barrows2.png" alt="barrows2"></p>
+<p>Additionally, abyss rift click boxes are now highlighted thanks to
+<a href="https://github.com/sethtroll">@Sethtroll</a> (again).</p>
+<p><img src="/img/blog/1.2.16-Release/abyss.png" alt="abyss"></p>
+<p>And new Rogue's den plugin has been added to RuneLite as well, that shows click boxes
+of the Rogue's den obstacles. Thanks to <a href="https://github.com/ShaunDreclin">@ShaunDreclin</a>!</p>
+<p><img src="/img/blog/1.2.16-Release/roguesden.png" alt="roguesden"></p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>The zoom plugin is now working again thanks to <a href="https://github.com/Abextm">@Abextm</a></li>
+<li>New option has been added to RuneLite settings that will make your window stay always on top</li>
+<li>Client is now logging the logs to ~/.runelite/logs, so in case you want to report problem,
+you can also send the logs that would help us with resolving the problem.</li>
+<li>POH icon's displaying when on the wrong floor was fixed</li>
+<li>Slayer task now do not decrements anymore when your slayer level is decremented
+(for example in God wars or from KBD special attack)</li>
+<li>Title bar buttons are now shown in the info panel when you have custom title bar disabled</li>
+</ul>
+<p>Enjoy the new release!</p>
+<p>~ Tomas</p>
+<h3 id="new-commits">New commits</h3>
+<p>We had 11 contributors this release!</p>
+<pre><code>Abex (1):
+      Allow titlebar buttons to be moved out of the titlebar
+
+Adam (9):
+      mousehighlight: don't show tooltip on sliding puzzles
+      timers plugin: respect enabled configuration
+      perspective: add method for checking if world location is in scene
+      fishing plugin: move minimap overlay to own overlay
+      runelite-client: shut down discord service when closed
+      http-service: try to release okhttp resources on shutdown
+      rs2asm: allow multiple newlines after header or instruction
+      item manager: allow getting images with quantity
+      item manager: also allow specifying stackable
+
+Max Weber (6):
+      method984 &gt; runScript
+      Revert "scripts: disable callbacks"
+      injector: copy exceptions on Injected classes
+      Add raw injector to hook the script interpreter
+      Zoom plugin: Relax inner zoom constraint
+      injector: Allow injection of &lt;init&gt; and &lt;clinit&gt;
+
+Nickolaj Jepsen (1):
+      Add NMZ plugin
+
+NotFoxtrot (1):
+      Add always on top setting
+
+Seth (8):
+      runecraft plugin: show click boxes of abyss rifts
+      cache: Update ObjectManager to include NULL names
+      runelite-api: redump objectid with null names
+      runelite-api: add getActions, imposterIds, and imposter to ObjectComposition
+      perspective: add getCanvasTextMiniMapLocation
+      Add barrows plugin
+      slayer plugin: add check for cachedXp when xp changes
+      poh plugin: fix icons displaying when changing planes
+
+ShaunDreclin (1):
+      Add Rogues' Den plugin
+
+SomeoneWithAnInternetConnection (1):
+      Fix mismapping of MouseWheel
+
+Tomas Slusny (2):
+      Fix logging inside info panel plugin
+      Add logback logger that will log to file
+
+Tyler Hardy (3):
+      Remove unused Zulrah plugin assets
+      Update ItemID from 160 cache
+      runepouch plugin: use itemmanager to render runepouch item icons
+
+UniquePassive (4):
+      Add puzzle box InventoryID
+      Add puzzle box WidgetInfo
+      Add puzzle solving algorithm
+      Add puzzle solver plugin
+</code></pre></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a></div></div></div></div><script type="text/javascript" src="/static/js/main.6904bbc0.js"></script></body></html>

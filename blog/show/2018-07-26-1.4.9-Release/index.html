@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.4.9 Release - RuneLite</title><meta name="description" content="Movable minimap and xptracker, achievement diary skill requirements, and bug fixes"><meta name="author" content="Adam"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/main.a6c4659c.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" async="" src="/static/js/2.a12c216e.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="/static/js/16.5e13a17a.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="Logo"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U"><i class="fab fa-discord"></i> Discord</a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient"><i class="fab fa-twitter"></i> Twitter</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite"><i class="fab fa-github"></i> GitHub</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li></ul></div></nav><div class="container" id="layout"><h1>1.4.9 Release</h1><p class="text-muted">2 months ago by Adam</p><hr><div class="markdown-body"><p>The minimap and xp tracker can now be moved by holding alt:</p>
+<p><img src="/img/blog/1.4.9-Release/movable-widgets.gif" alt="movable-widgets"></p>
+<p>An achievement diary plugin was added which shows skill requirements on each
+task in the diaries:</p>
+<p><img src="/img/blog/1.4.9-Release/diary.png" alt="diary"></p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>Fix minimap overlays drawing on the minimap when it was hidden</li>
+<li>Fix minimap plugin to be able to hide the minimap on 'bottom line' side stones
+arrangement</li>
+<li>Fix !kc not working in private messages</li>
+<li>Rewrite ge plugin alt+click search to work more reliably on more interfaces,
+such as the inventory when in the grand exchange.</li>
+<li>Add abyssal sire stun timer</li>
+<li>Fix opponent info plugin hiscore lookup on seasonal deadman worlds</li>
+<li>Fix menaphite emote clue requirements</li>
+<li>Fix XP tracker to no longer track skills while they are not being trained</li>
+<li>Fix XP tracker to track past virtual level 126, up to 200m</li>
+<li>Add "show exact value" option to bank value plugin</li>
+<li>Move banana plantation clue out of tree</li>
+<li>Fix height of ground items</li>
+</ul>
+<p>Enjoy!</p>
+<p>- Adam</p>
+<h3 id="new-commits">New commits</h3>
+<pre><code>Adam (8):
+      runelite-api: add fixed minimap widgets
+      mixins: only update render parent of nested widget if widget would have been rendererd
+      mixins: optimize widget isHidden and getParent
+      perspective: account for minimap being hidden or moved in worldToMiniMap
+      Add private message input event and add !kc to chatcommands for private messages
+      Merge runelite-scripts into runelite-client
+      Add achievement diary plugin
+      cache: fix assembler to set correct switch table index
+
+Bert De Geyter (1):
+      Render abyss rift portals as soon as visible (#3841)
+
+Jeremy Plsek (1):
+      ge plugin: rewrite alt-click searching
+
+John Pettenger (1):
+      timers plugin: add abyssal sire stun timer
+
+Jordan Atwood (2):
+      opponent info plugin: Fix SDMM hiscore lookup
+      clues: Fix menaphite emote requirements
+
+Joshua Filby (1):
+      fix: use the supplied actor to check against in isInteractingWith
+
+Kamiel (1):
+      perspective: fix regression caused by 2599db2
+
+Levi (2):
+      Check for skill being trained while ticking change (#4469)
+      Fix level 126 next goal to be max XP (200,000,000) instead of -1 xp
+
+Magic fTail (1):
+      bank value plugin: add option to display exact value
+
+Max Weber (5):
+      runelite-client: Consume hotkeys in HotkeyListener
+      runelite-client: Handle releasing modifiers first correctly
+      cluescrolls: Move banana plantation clue out of tree
+      cluescrolls: Add description to map clues
+      mixins: Don't post mouse events that have already been posted
+
+Timo van Veenendaal (2):
+      Inventory viewer: make padding between items same as in inventory.
+      Inventory viewer: Fix vertical spacing of items to match inventory.
+
+Tomas Slusny (20):
+      Add support for mod public chat to ChatCommands
+      Add JMod clan member rank
+      Add new WidgetIDs for minimap
+      Use correct widget when hiding minimap
+      Move private methods to bottom of minimap plugin
+      Hide only inside of minimap but not logout
+      Follow GitHub templates for bug report and issue (#4205)
+      Move rs-client related classes to own package
+      Allow RS loading classes to be used with Guice
+      Inject and load RS client and applet through Guice
+      Send launch properties around as bound constants
+      Remove recursive dependency on RuneLite
+      Properly load configuration when showing ClientUI
+      Move Discord and EventBus after ClientUI
+      Add support for resetting the detached overlays
+      Use Overlay#getBounds for getting correct bounds
+      Add experience tracker widget WidgetInfo
+      Add support for RS movable widgets
+      Update frame config when needed
+      Propagate height to ground items
+
+aquivers (1):
+      Add more chat !kc abbreviations (#4372)
+</code></pre></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a></div></div></div></div><script type="text/javascript" src="/static/js/main.6904bbc0.js"></script></body></html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.3.1 Release - RuneLite</title><meta name="description" content="Prayer reordering, bank price evaluation, and NPC highlighting"><meta name="author" content="Adam"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/main.a6c4659c.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" async="" src="/static/js/2.a12c216e.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="/static/js/38.02acf776.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="Logo"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U"><i class="fab fa-discord"></i> Discord</a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient"><i class="fab fa-twitter"></i> Twitter</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite"><i class="fab fa-github"></i> GitHub</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li></ul></div></nav><div class="container" id="layout"><h1>1.3.1 Release</h1><p class="text-muted">6 months ago by Adam</p><hr><div class="markdown-body"><p>A prayer reordering plugin has been added which lets you reorder the prayers in
+your prayer book. Big thanks to <a href="https://github.com/devdennis">@devdennis</a> for
+the excellent work on making this possible;</p>
+<p><img src="/img/blog/1.3.1-Release/prayer-reorder.gif" alt="prayorder"></p>
+<p><a href="https://github.com/McSwindler">@McSwindler</a> contributed a NPC highlight plugin
+which lets you tag npcs, and also configure a list of npcs which are
+highlighted.</p>
+<p><img src="/img/blog/1.3.1-Release/npc-tag.png" alt="npctag"></p>
+<p>A bank evaluator has been added, which is a combination of effort from myself,
+<a href="https://github.com/jplsek">@jplsek</a>, and
+<a href="https://github.com/TheLonelyDev">@TheLonelyDev</a>. It will tell you the overall
+GE and HA price of each tab of your bank.</p>
+<p><img src="/img/blog/1.3.1-Release/bank-eval.png" alt="bankval"></p>
+<p>The ground items plugin now supports quickly hiding and highlighting items.
+Thanks to <a href="https://github.com/sethtroll">@sethtroll</a>.</p>
+<p><img src="/img/blog/1.3.1-Release/grounditems.gif" alt="grounditems"></p>
+<p>A herbiboar plugin has been added from
+<a href="https://github.com/tylerthardy">@Perterter</a>. It highlights the starting rocks,
+trail, and the two objects to search at the end of each trail.</p>
+<p><img src="/img/blog/1.3.1-Release/herbiboar.png" alt="herbiboar"></p>
+<p>An item price plugin has been added, from
+<a href="https://github.com/ChaoticConundrum">@ChaoticConundrum</a>, which shows the price
+of items when hovered over in the bank.</p>
+<p><img src="/img/blog/1.3.1-Release/itemprice.png" alt="itemprice"></p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>Ground items now support wildcards in both hidden and highlighted fields, so for example <code>*bone*</code>
+will hide/highlight all bones</li>
+<li>The boosted stats plugin now shows time until next change</li>
+<li>The agility plugin allows configuring of the hitbox overlay color</li>
+<li>Game menus options are no longer left broken when moving regions with the menu
+option</li>
+<li>Attack style plugin now hides attack styles better</li>
+<li>Fixed Kourend library plugin, which was broken last release</li>
+<li>Show glory location in POH plugin</li>
+<li>Common cannon placement spots have been added to the cannon plugin</li>
+<li>Remaining XP to level has been added to the hiscore panel</li>
+<li>Removed background from the prayer flick overlay, which made the quick prayers
+ toggle hard to see</li>
+<li>Added godwars altar timer</li>
+<li>Superior slayer notifications have been added to the slayer plugin</li>
+<li>The slayer plugin infobox (with your current task) now has a configurable
+timeout</li>
+<li>The time until levelup has been added to the xp tracker panel</li>
+</ul>
+<p>Enjoy!</p>
+<p>- Adam</p>
+<h3 id="new-commits">New commits</h3>
+<p>We had 16 contributors this release!</p>
+<pre><code>Adam (26):
+      runelite-mixins: add null checks in region mixin
+      Bump for 1.3.0.1-SNAPSHOT
+      runelite-mixins: add null checks in region mixin
+      boosts plugin: show time to next change
+      ground items: add support for wildcards
+      ge plugin: move item composition and image calls off of awt thread
+      runescape-client: export updateNote
+      runescape-client: fix sprite originalWidth&lt;-&gt;width and export fields for loading sprites
+      cache: add provider interfaces for items, models, sprites, and textures
+      cache: add updateNote to ItemDefinition
+      cache: fix not invalidating vertexNormals in reset
+      cache: expand on texture definition and loader
+      cache: store original pixels and palette too, and add normalize()
+      cache: add resize, recolor, and retexture to modeldefinirtion
+      cache: add item sprite renderer
+      cache controller: expose item sprites
+      examine service: correct type column enum
+      item manager: add batch item price lookup
+      Hook to actor health being updated to detect death
+      gitignore: add eclipse files
+      runelite-api: move getConvexHull to Model
+      runelite-api: add getConvexHull to Actor
+      Add npc menu options to MenuManager
+      devtools: remove double npc transform call
+      utils: add wildcard matcher from grounditems
+      runelite-client: add npc highlight plugin
+
+Cas (1):
+      Agility plugin: Agility configuration with Select Color
+
+Charlie Waters (6):
+      Add items to item stats plugin: spinach roll, lava eel, sandwich lady items, jangerberries
+      Fix bug with rendering more than two tooltips following mouse
+      Add TooltipManager method to add tooltip to front of list, and always add mouse highlight tooltip to front
+      Add item prices plugin for item price/value tooltips
+      Add FocusChanged event from runescape client
+      Fix Groud Items plugin Alt+Tab bug by hooking FocusChanged event
+
+Dennis (10):
+      restore menu entries after open/close widget
+      fix prayer order resetting after teleporting to a new area
+      injector: checkcast return values from replaced methods
+      runescape-client: export animation related symbols
+      runelite-api: expose dragging widget fields
+      runelite-api: add event for dragging widget
+      runelite-api: add widget open event
+      runelite-mixins: add null check for widget group in getGroup()
+      runelite-api: add widget config
+      runelite-client: add prayer reordering plugin
+
+Dreyri (2):
+      Broadcast widget hidden changed recursively for each child too
+      Use isLocalHidden in attack indicator plugin
+
+Jeremy Plsek (4):
+      http-api: add batch lookup to ItemClient
+      stack formatter: support larger stack sizes
+      bank item query: only search items in current tab
+      Add bank value plugin
+
+Kamiel (1):
+      Add progress pie type overlay
+
+Max Weber (5):
+      kourendlibrary: Fix NPE while loading
+      kourendlibrary: Use correct coordinate conversion
+      jarvis: allow null points
+      Add JShadowedLabel
+      Change colors in XPInfoPanel to be brighter
+
+Seth (9):
+      poh plugin: change gameobject map to tile object
+      pog plugin: fix mounted glory minimap icon
+      cannon plugin: add common cannon spots
+      ground items: add support for quickly hiding/highlighting items
+      hiscore panel: make hiscores type more visible
+      hiscore panel: add Remaining XP to next level to hover text
+      hiscore panel: add loading label when searching
+      menu entry swapper: add bury swap
+      prayer flick overlay: remove background arc
+
+Tomas Slusny (24):
+      Extract utlity methods to SwingUtil class
+      Remove the need to extend JFrame in ClientUI
+      Make plugins work with new ClientUI
+      Remove need to extend JToolBar in PluginToolbar
+      Make plugins work with the new PluginToolbar
+      Remove the need for custom TitleToolbar component
+      Make plugins work with new title toolbar
+      Add Discord button through DiscordPlugin
+      Add support for popups to navigation button
+      Change panel supplier to just getter for panel
+      Consistent behaviour between ClientUI and InfoPane
+      Set correct offsets to overlays, smaller panels
+      Reposition instance map correctly in resizeable
+      Use backgroundComponent for drawing border of map
+      Lower default width of the PanelComponent
+      Fix herbiboar plugin NPE on startup
+      Fix AgilityPlugin naming conventions
+      Fix Herbiboar plugin naming conventions
+      Correctly name Herbiboar classes
+      Remove unused variables in Herbiboar plugin
+      Fix ClientUI settings loading
+      Click the navigation button on selecting in
+      Fix tooltip modicon OutOfBounds
+      Do not display stack in price tooltips
+
+Toocanzs (1):
+      Add God Wars Altar Timer
+
+Tyler Hardy (4):
+      Add herbiboar varbits
+      Add herbiboar plugin
+      Move region check to loading
+      Fix improper varbit for trail 31372
+
+Xavier Bergeron (1):
+      Add slayer superior foe notification
+
+XrioBtw (1):
+      Fix net and harpoon swap for all fishing spots
+
+joshpfox (1):
+      configurable slayer infobox expiry timer
+
+nvisser (1):
+      Add time till next level to xptracker
+</code></pre></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a></div></div></div></div><script type="text/javascript" src="/static/js/main.6904bbc0.js"></script></body></html>

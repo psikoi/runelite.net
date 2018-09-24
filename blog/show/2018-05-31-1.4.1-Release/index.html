@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.4.1 Release - RuneLite</title><meta name="description" content="Chat recolor, redwood tree markers, and grand exchange notifications"><meta name="author" content="Adam"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/main.a6c4659c.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" async="" src="/static/js/2.a12c216e.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="/static/js/24.c31ffdc5.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="Logo"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U"><i class="fab fa-discord"></i> Discord</a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient"><i class="fab fa-twitter"></i> Twitter</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite"><i class="fab fa-github"></i> GitHub</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li></ul></div></nav><div class="container" id="layout"><h1>1.4.1 Release</h1><p class="text-muted">4 months ago by Adam</p><hr><div class="markdown-body"><p>First, lately there have been several targeted phishing attacks against
+RuneLite, including targeted ad buys on both Google and Reddit. If in doubt,
+cross reference the site with the official GitHub and Discord. The main tell is
+the official Windows download is an executable digitally signed by Alexander
+Henne, and not a .jar. We can generally get these sites taken down, but it
+usually takes some time to do so.</p>
+<p>Now for the update:</p>
+<p>Chat color for each chat type (public, private, clan, trade, etc.) are now
+configurable in the "Chat Colors" configuratrion.</p>
+<p><img src="/img/blog/1.4.1-Release/chatcolors.png" alt="chatcolors"></p>
+<p>The woodcutting plugin now can overlay redwood tree locations.</p>
+<p><img src="/img/blog/1.4.1-Release/redwood.png" alt="redwood"></p>
+<p>The grand exchange plugin can now notify you when something buys or sells.</p>
+<p><img src="/img/blog/1.4.1-Release/genotification.png" alt="genotification"></p>
+<p>Also a special thanks to <a href="https://github.com/sainttx">@Matthew Steglinski</a> who
+contributed Javadoc for <a href="https://github.com/runelite/runelite/pull/3236">155
+files</a> in the API. This greatly
+improves our <a href="https://static.runelite.net/api/runelite-api/">published Javadoc</a>.</p>
+<p>Screen markers can now be assigned names, making it easy to save and reuse them
+later without having to re-add and position them. Existing screen markers will
+need to be deleted and readded.</p>
+<p>Full screen mode was added and is toggleable in RuneLite settings.</p>
+<p><img src="/img/blog/1.4.1-Release/fullscreen.png" alt="fullscreen"></p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>Fix hiscore lookup autocomplete</li>
+<li>Fix hiscore and GE lookups getting stuck when given invalid input</li>
+<li>Improve boss timer spawn timers by start them when the NPC despawns instead of
+at the beginning of the death animation</li>
+<li>Add miscellaneous and scroll teleports to the world map plugin</li>
+<li>Skill calculator now turns actions that will become available before target
+level orange</li>
+<li>The bank evaluator plugin now includes the price of untradeable items
+tradeable versions</li>
+<li>Optimize clickbox calculation code</li>
+<li>Fix Vet'ion boss timer and add KQ boss timer</li>
+<li>Add option to swap "interact" with "empty" on birdhouses</li>
+<li>Update menu swapper to support multiple fairy ring defaults</li>
+<li>Fix slayer plugin to work with NPC contact</li>
+<li>Add Bandit Camp fishing spot to fishing plugin</li>
+<li>Fix MLM plugin when it is started/stopped from within the MLM</li>
+<li>Fix UI responsiveness when closing skill calculator</li>
+<li>Add Limestone attack stone to skill calc</li>
+<li>Reset gorillas in demonic gorilla plugin on startup and world hop</li>
+<li>Add gilded altar to idle notifier</li>
+<li>Add wine making to idle notifier</li>
+<li>Add option to swap minecart menu option to travel from GE to Keldagrim</li>
+<li>Add bar dispenser clickbox overlay to blast furnace plugin</li>
+<li>Show clickbox of the Boiler in Dorgesh-Kaan agility course in the agility
+plugin</li>
+</ul>
+<p>Additionally, there were clue fixes from Eadgars-Ruse, Jordan Atwood, and Maiddog.</p>
+<p>Enjoy!</p>
+<p>- Adam</p>
+<h3 id="new-commits">New commits</h3>
+<p>We had 26 contributors this release!</p>
+<pre><code>Adam (30):
+      pom: set updatePolicy always for runelite snapshots
+      pom: remove tomcat deploy execution
+      hiscore panel: properly error if result is null
+      ge search panel: catch cache load exception from search returning null
+      Revert "boss timers: improve accuracy of boss respawn timer"
+      boss timers plugin: change to use npc despawn event
+      agility plugin: fix exception on reconnect
+      poh plugin: fix exception when tile for burner is not fully visible
+      Remove actor death event, use despawn event instead
+      woodcutting plugin: timeout woodcutting sessions
+      woodcutting plugin: show redwood trees
+      world map plugin: merge jewellery teleports and magic teleports
+      world map plugin: add misc teleports
+      skill calculator: lombok some of UIActionSlot
+      skill calculator: turn indicators orange for actions that will become available before target
+      screen marker overlay: stop if preferred size is null
+      antidrag: reset drag when focus is lost
+      runelite-client: add ItemMapping to map untradeable items to tradeable versions
+      item manager: use item mapping
+      item manager: cache unable to look up on unsuccessful bulk lookup too
+      runelite-client: update bank calculation and barrows calculation to use item mapping
+      runelite-api: optimize ChatMessageType.of()
+      config manager: fix resetting configuration items with no default value
+      config panel: allow color configs with no value
+      runelite-client: add chat color config
+      runelite-client: remove chat color config from plugins
+      Revert "perspective: use viewport offset in get2DGeometry"
+      perspective: use viewport offset for offsetting rectangle in get2DGeometry
+      runelite-api: use lombok constructors for Vertex/Triangle
+      perspective: optimize clickbox generation
+
+Alexsuperfly (3):
+      boss timers: improve accuracy of boss respawn timer
+      boss timers: fix Vet'ion timer to start after 2nd phase death
+      boss timers: add KQ to boss list
+
+BeefaloKing (1):
+      Stretched Fixed Mode Plugin: Add Integer Scaling option (#2863)
+
+Eadgars-Ruse (2):
+      Change hot/cold overlay to only show outline of dig area (#3166)
+      Fix coordinates for venenatis hot cold clue (#3212)
+
+Ethan (5):
+      Exclude ironmen from daily herb box notifications
+      Add option to swap "interact" with "empty" on birdhouses
+      Update menu swapper to support multiple fairy ring defaults
+      Add teleport scroll locations to map
+      Add notifications to Grand Exchange plugin
+
+Hydrox6 (1):
+      Fix items with no Grand Exchange Price using Store Price for the right click menu instead of High Alchemy value
+
+Iguaan (2):
+      slayer plugin: read bracelet charges directly from chat message
+      slayerplugin: fix current task regex and new task via npc contact regex
+
+Jeremy Plsek (1):
+      enqueue most post/put/delete requests
+
+Jordan Atwood (6):
+      Allow imbued Ring of Wealth for emote clue (#3230)
+      Fix location for West Ardougne emote clue (#3231)
+      Fix Grand Tree mushrooms clue
+      Improve Yanille anvil room map clue location
+      Add Wilderness Bandit Camp fishing spot
+      Fix Iban's Temple emote clue
+
+Kelvin (1):
+      Use single DynamicGridLayout for XPTracker stats (#3432)
+
+Kruithne (1):
+      skill calculator: allow XP values up to 200,000,000 rather than 188,884,740
+
+Lars (3):
+      Motherlode Mine - Startup / shutdown bugs (#3124)
+      XpInfoBox - Remove min/max experience check (#3397)
+      Use screenmarker name not ID for displaying it (#3423)
+
+Magic fTail (3):
+      BossTimerPlugin: Find bosses based on id instead of name
+      More accurate respawn timers
+      MenuEntrySwapper: Reorder config items to alphabetical order
+
+Maiddog (1):
+      Fix typo in Pyramid Plunder emote clue (#3419)
+
+Matthew Steglinski (6):
+      runelite-api: Add missing documentation
+      Fix ArrayIndexOutOfBoundsException when an empty command is typed
+      devtools: Add camera position overlay
+      devtools: Add base, local, and region coordinates to LocationOverlay
+      grandexchange: Format 'Price each' value for items in additional information layout
+      Add local player death event
+
+Morgan Lewis (3):
+      Clue Scroll Plugin: Add wording to direct users to world map
+      Dev-tools: Add location overlay to show world map position
+      Remove WorldMapOverlayTest Plugin
+
+Ruben Amendoeira (6):
+      Hiscore auto-complete fix
+      Skill calcs performance improvement
+      Refactor ClientUI using CardLayout
+      Remove feed refresh button
+      Add top margin to the XP tracker error panel (#3343)
+      Add naming to screenmarkers
+
+Simon Landry (1):
+      Add Boiler to Dorgesh-Kaan obstacles IDs (#3437)
+
+Tomas Slusny (11):
+      Unify NPC highlighting color settings
+      Use NpcSpawned and despawned for getting cacheNpc
+      Move private methods at bottom of NPC plugin
+      Add support for fullscreen mode
+      Change default PluginPanel layout to DynamicGrid
+      Change config TextField to TextArea
+      Move highlighted/hidden to top
+      Store markers based on epoch millis
+      Properly set preferredSize of navContainer
+      Add Limestone attack stone to skill calc
+      Update Lombok to 1.16.22
+
+TzZek (1):
+      Add making wines to idle notifications (#3441)
+
+WooxSolo (1):
+      Reset gorillas in demonic gorilla plugin on startup and world hop
+
+drivfe (1):
+      screen markers: fix for confirm dialog appearing behind main UI window
+
+iguaan (3):
+      idlenotifier: add support for gilded altar
+      timers: use correct capitalisation for antifire in settings
+      slayerplugin: fixed bracelet charge counter
+
+iskarky (1):
+      Swap menu entry for minecart travel from GE to Keldagrim
+
+shmeeps (2):
+      Capitalize world map configuration names (#3301)
+      Account for slightly different dimensions of first and second/third floors (#3249)
+
+ypperlig (1):
+      blast furance plugin: add bar dispenser to clickbox overlay
+</code></pre></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a></div></div></div></div><script type="text/javascript" src="/static/js/main.6904bbc0.js"></script></body></html>

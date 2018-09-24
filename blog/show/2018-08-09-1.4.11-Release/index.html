@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.4.11 Release - RuneLite</title><meta name="description" content="Birdhouse timers, movable xp globes, and bug fixes"><meta name="author" content="Adam"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/main.a6c4659c.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" async="" src="/static/js/2.a12c216e.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="/static/js/14.140b442b.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="Logo"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U"><i class="fab fa-discord"></i> Discord</a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient"><i class="fab fa-twitter"></i> Twitter</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite"><i class="fab fa-github"></i> GitHub</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li></ul></div></nav><div class="container" id="layout"><h1>1.4.11 Release</h1><p class="text-muted">2 months ago by Adam</p><hr><div class="markdown-body"><p>The farming plugin has been renamed to the timer plugin and now includes timers,
+stopwatches, and birdhouse timers. Thanks to
+<a href="https://github.com/takuyakanbr">@takuyakanbr</a> for contributing this awesome
+feature!</p>
+<p><img src="/img/blog/1.4.11-Release/timer1.png" alt="timer1">
+<img src="/img/blog/1.4.11-Release/timer2.png" alt="timer2">
+<img src="/img/blog/1.4.11-Release/timer3.png" alt="timer3"></p>
+<p>The RuneLite XP globes are now movable similar to other overlays:</p>
+<p><img src="/img/blog/1.4.11-Release/globes.gif" alt="globes"></p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>Add !cmb chat command</li>
+<li>Add agility clickbox overlay to Werewolf course</li>
+<li>Add tablet creation to idle notifier</li>
+<li>Fix pest control and report button plugins which broke in the Monday game
+update</li>
+<li>Fix screen shake interfering with vertical camera</li>
+<li>Add option to raids plugin to show scouter interface throughout the raid</li>
+</ul>
+<p>Enjoy!</p>
+<p>- Adam</p>
+<h3 id="new-commits">New commits</h3>
+<pre><code>Adam (9):
+      Disable zoom extender when a cache overlay fails to load
+      Fix applying default config to session settings
+      modelviewer: fix some incorrect gl usage, add error logging
+      modelviewer: fix zfighting of models
+      item manager: assert item composition access is done from client thread
+      ge plugin: fix accessing item composition from executor thread
+      config service: update key name too when setting config
+      chat commands: add !cmb command
+      scripts: update for game update
+
+Brady (2):
+      Add missing shortcuts to trollheim (#4711)
+      Move greater demon cannon spot to better location
+
+Jaimy Smets (2):
+      Add obstacles to Werewolf court
+      Add tablet creation animation to idle notifier
+
+Jordan Atwood (20):
+      achievement diary plugin: Fix coal mining req
+      chat commands plugin: Use consistent message check
+      resources: Remove unused images
+      SwingUtil: Fix grayscaleOffset to not modify alpha
+      Add image utility class
+      resources: Remove derivative images
+      clan manager: Use Sprite IDs for rank badges
+      plugins: Use shared clue arrow and reset images
+      agility plugin: Use Item ID for arena timer
+      clue scroll plugin: Use Item IDs for overlays
+      death indicator plugin: Use Item IDs for overlays
+      fight caves plugin: Use Sprite IDs for overlay images
+      hiscores plugin: Remove duplicate skill icon images
+      kingdom plugin: Use Item ID for overlay image
+      puzzle solver plugin: Use Sprite ID for overlay image
+      raids plugin: Use Sprite ID for raids timer
+      screenshot plugin: Use Sprite ID for overlay image
+      xp tracker plugin: Use shared image for icon
+      ImageUtil: Add getResourceStreamFromClass method
+      Remove unused @Slf4j annotations and imports
+
+Kamiel (9):
+      chat history: clear public chat when menu option is clicked
+      item stats: fix tooltip not appearing when hovering over item
+      menu entry swapper: fix last destination on arceuus fairy ring
+      menu entry swapper: fix zanaris fairy ring not being recognized
+      menu entry swapper: fix zanaris swap not working for PoH tree-ring combo
+      player indicators: draw tile highlight on ABOVE_SCENE layer (#4629)
+      Update chatbox widget IDs
+      Update pest control widget IDs
+      Update nightmare zone widget ID
+
+Magic fTail (1):
+      Add pharaoh's sceptres, Toxic staff of the dead, tome of fire item maps
+
+Max Weber (4):
+      mixins: Fix camera pitch relaxer not fully relaxing after a screen shake
+      cache-client: Return failure to the handshake Future
+      runelite-client: Make ItemManager's price update thread safe
+      runelite-client: Always use the mapped price for items
+
+Tomas Slusny (10):
+      Add support for making XP globes moveable
+      Use correct marker name when cancelling edit
+      Add mappings for indexed script db
+      Move isOverlayOutdated to IndexDatabase
+      Account for linked item id, format tooltip
+      Add Tournament world type
+      Remove unnecessary headers from plugin panels
+      Add null-check for game canvas
+      Properly check for changing values in raids plugin
+      Add setting to preserve scouter in raid
+
+c01dc0ffee (1):
+      Make DeathIndicatorPlugin use LocalPlayerDeath (#4745)
+
+takuyakanbr (4):
+      Convert farming tracker to time tracking plugin
+      time tracking: add bird house tracker
+      time tracking: add clock panel
+      time tracking: add overview tab
+</code></pre></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a></div></div></div></div><script type="text/javascript" src="/static/js/main.6904bbc0.js"></script></body></html>

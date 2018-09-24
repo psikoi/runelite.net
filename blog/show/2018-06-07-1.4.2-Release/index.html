@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.4.2 Release - RuneLite</title><meta name="description" content="Respawn timers, death indicator plugin, prayer indicators"><meta name="author" content="Adam"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/main.a6c4659c.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" async="" src="/static/js/2.a12c216e.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="/static/js/23.db8ccb8c.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="Logo"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U"><i class="fab fa-discord"></i> Discord</a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient"><i class="fab fa-twitter"></i> Twitter</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite"><i class="fab fa-github"></i> GitHub</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li></ul></div></nav><div class="container" id="layout"><h1>1.4.2 Release</h1><p class="text-muted">4 months ago by Adam</p><hr><div class="markdown-body"><p>The NPC indicators plugin now has an option to show respawn times for tagged
+NPCS. Thanks to <a href="https://github.com/WooxSolo">@WooxSolo</a> for his work on this.</p>
+<p><img src="/img/blog/1.4.2-Release/respawn.png" alt="respawn"></p>
+<p><a href="https://github.com/DannysPVM">@DannysPVM</a> added a death indicator plugin which
+remembers where you've died last, and on what world.</p>
+<p><img src="/img/blog/1.4.2-Release/deathindicators.png" alt="deathindicator"></p>
+<p>The prayer flicking plugin was renamed to the prayer plugin - and now shows
+prayer indicator infoboxes, from <a href="https://github.com/raqes">@raqes</a>.</p>
+<p><img src="/img/blog/1.4.2-Release/prayerindicator.png" alt="prayindicator"></p>
+<p>The full screen mode added in last weeks update was removed as it is not working
+for some users and getting their client stuck in a nonworking state. We may add
+it back in the future if we can make it work better.</p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>The screenshot plugin now screenshots pvp kills and pet drops</li>
+<li>A 'Reset others' option was added to the xp tracker panel</li>
+<li>A Charge timer was added</li>
+<li>Fix Callisto and Venenatis boss timers from previous release</li>
+<li>Fix regen plugin showing when orb is hidden</li>
+<li>Added Zeah fishing spots to fishing plugin</li>
+<li>Add dragonfire-charged items to untradeable item mappings</li>
+<li>Fix expeditious bracelet charge tracking, which was broke last release</li>
+<li>Add support for swapping all options on the house portal to the menu entry
+swapper</li>
+<li>Show RuneLite launcher version in the info panel</li>
+<li>Add bake pie and string jewellery to idle notifier</li>
+<li>Fix rare crash when drawing clickboxes</li>
+</ul>
+<p>Additionally, there were clue fixes from Jordan Atwood, StanleyMole, and Trig.</p>
+<p>Enjoy!</p>
+<p>- Adam</p>
+<h3 id="new-commits">New commits</h3>
+<p>We had 26 contributors this release!</p>
+<pre><code>Adam (25):
+      perspective: do not remove culled faces from clickbox calculation
+      chat color config: set default color for examine highlight
+      Fix prayer enumation order back to the order the prayers are in game
+      chat message manager: set default colors for examine
+      hooks: move combat info callback to actor mixin
+      Flag npc as dead when their health ratio hits 0
+      runelite-client: update to use isDead
+      pom: update rs.version
+      runelite-mixins: once again reset menu on widget close
+      Rename CONTRRIBUTING.md -&gt; CONTRIBUTING.md
+      Fix null names for quest objects in cryptic clues
+      config invocation handler: fix setting config values to null
+      config manager: support Instant
+      runelite-client: add death indicator plugin
+      config manager: only apply default config from methods which read configuration
+      antidrag: remove unused config setter
+      death indicators: only set death mark after respawning in a known respawn location
+      death indicator: move location check to after respawn
+      death indicator: use animation to detect death
+      Revert "Merge pull request #3192 from deathbeam/add-support-for-fullscreen"
+      clientui: reimport ExpandResizeType from fullscreen revert
+      screenshot plugin: capitalize pet messages constant
+      screenshot plugin: screenshot pvp kills
+      info panel: use revision number from client
+      npc scene overlay: fix respawn time
+
+Evan Sloan (1):
+      Add reset others to XpPanel right click menu
+
+Gert de Pagter (1):
+      Use github issue templates
+
+Hydrox6 (7):
+      Add Charge Timer
+      Fix Callisto and Venenatis Boss Timers using the incorrect ID
+      Reorder updateConfig to match TimerConfig
+      Add support for Clan Chat Info highlights for the Raids Plugin
+      Add default highlight for Game Messages to fix Daily Task message colour
+      Fix Charge timer showing with every teleport
+      Remove Charge Timer when the effect ends
+
+Infinitay (1):
+      Add hyperlinks to project layout in README (#3509)
+
+Jeremy Plsek (1):
+      regen plugin: don't show regen if widget is hidden
+
+Jordan (2):
+      Reword Dad hot-cold clue hint (#3513)
+      Fix McGrubor and Cow pen hot-cold locations (#3603)
+
+Jordan Atwood (3):
+      Fix "The hand ain't listening." clue step
+      Add missing Zeah fishing spots
+      Fix Guard Vemmeldo anagram clue location
+
+Juuso Lapinlampi (1):
+      Fix spelling of Taverley
+
+Kamiel (1):
+      Allow screenmarker resizing below base point
+
+Lars (2):
+      Fix typo in BarrowsPlugin (Spanwed to Spawned)
+      Update tooltip for Grand Exchange Panel Icon to "Grand Exchange" (#3618)
+
+Magic fTail (2):
+      Add dragonfire-charged armour item mappings
+      screenshot plugin: screenshot receiving pet
+
+Max Weber (1):
+      runelite-client: Require assertions when developer mode is on
+
+Reasel (1):
+      Add Tile location tooltip option to dev tools. Remove extra empty line.
+
+Ruben Amendoeira (1):
+      Remove Skill Calc unused code (#3568)
+
+Seth (1):
+      slayer plugin: fix expeditious regex pattern
+
+Snakk (1):
+      menu entry swapper: add options for house portal
+
+StanleyMole (1):
+      Fix TzHaar and Castle Draken emote clues
+
+Tomas Slusny (5):
+      Change tithe farm to use PieComponent
+      Change schedule to GameTick sub in Tithe plugin
+      Cleanup RuneLite class (use Lombok)
+      Add support for getting runelite launcher version
+      Show RuneLite launcher version in info panel
+
+Trig (1):
+      Fix "hosptial" anagram clue typo (#3600)
+
+TzZek (1):
+      Add bake pie &amp; string jewelry to idle notifier (#3486)
+
+WooxSolo (5):
+      Fix remember screen bounds for KEEP_GAME_SIZE
+      Move frame to right screen border when expanding large window
+      Fix Jarvis infinite loop
+      perspective: fix getCanvasTileAreaPoly for even number sizes
+      npc indicators: add respawn timer
+
+psikoi (2):
+      Add Icon Material Tab + Hover effects
+      Refactor plugin panels for new Icon Tabs
+
+raqes (2):
+      Rename Prayer Flicking plugin to Prayer
+      Add prayer indicators to prayer plugin
+
+shmeeps (1):
+      Use chat messages for GE notifications (#3492)
+
+ypperlig (1):
+      Change tickrate for giant seaweed from 10 to 5
+</code></pre></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a></div></div></div></div><script type="text/javascript" src="/static/js/main.6904bbc0.js"></script></body></html>

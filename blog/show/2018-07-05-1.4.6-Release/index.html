@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.4.6 Release - RuneLite</title><meta name="description" content="Lightbox and Varrock Museum quiz solver, config panel tags and favorites, Discord bosses &amp; minigames"><meta name="author" content="Tomas"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/main.a6c4659c.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" async="" src="/static/js/2.a12c216e.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="/static/js/19.6d3cef11.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="Logo"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U"><i class="fab fa-discord"></i> Discord</a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient"><i class="fab fa-twitter"></i> Twitter</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite"><i class="fab fa-github"></i> GitHub</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li></ul></div></nav><div class="container" id="layout"><h1>1.4.6 Release</h1><p class="text-muted">3 months ago by Tomas</p><hr><div class="markdown-body"><p>A lightbox solver plugin was added which tells you the pattern to solve lightboxes after
+observing a few of the switches. Contributed by <a href="https://github.com/Adam-">@Adam-</a>.</p>
+<p><img src="/img/blog/1.4.6-Release/lightboxsolver.png" alt="lightboxsolver"></p>
+<p>A helper for Varrock Museum Quiz was added as well that highlights correct answer to
+questions in Varrock Museum basement. Thanks to <a href="https://github.com/vikke1234">@vikke1234</a>
+who contributed this feature.</p>
+<p><img src="/img/blog/1.4.6-Release/varrockmuseumsolver.png" alt="varrockmuseumsolver"></p>
+<p>The configuration panel was significantly improved thanks to big contribution from
+<a href="https://github.com/takuyakanbr">@takuyakanbr</a>. Some of the improvements are:</p>
+<ul>
+<li>Each plugin now has a short description when hovered</li>
+<li>Each plugin now has tags that will make plugins easier to search for</li>
+<li>Plugins can now be pinned to the top of the panel (a new star icon was added next to each plugin name
+that when clicked will pin the config option to top)</li>
+<li>Search bar in configuration panel will now always stay on top</li>
+<li>Each configuration page for plugins now have back and on/off buttons at the top of panel</li>
+</ul>
+<p><img src="/img/blog/1.4.6-Release/configbackbutton.png" alt="configbackbutton">
+<img src="/img/blog/1.4.6-Release/configfavorites.png" alt="configfavorites">
+<img src="/img/blog/1.4.6-Release/configtags.png" alt="configtags">
+<img src="/img/blog/1.4.6-Release/configtooltip.png" alt="configtooltip"></p>
+<p>Thanks to another awesome contribution from <a href="https://github.com/PandahRS">@PandahRS</a> who spent
+a lot of time manually mapping a lot of RuneScape surface to regions, the Discord plugin now has
+a lot of new features, including display of <strong>city</strong> you are in, <strong>dungeon</strong> you are currently
+exploring, <strong>boss</strong> you are currently fighting and even <strong>minigame</strong> you are currently playing.</p>
+<p>Due to privacy reasons, these new location-based features are disabled in any PVP scenario, such
+as PVP worlds, High Risk worlds, DMM and Seasonal DMM worlds.</p>
+<p><img src="/img/blog/1.4.6-Release/discord1.png" alt="discord1">
+<img src="/img/blog/1.4.6-Release/discord2.png" alt="discord2"></p>
+<p>In addition to the highlighted features, there have been several other improvements and bugfixes this release:</p>
+<ul>
+<li>!total, !clues and !lvl commands now properly show ranks based on account types</li>
+<li>Plenty of new food types have been added to Item Stats plugin</li>
+<li>SOTD timer now properly works also for SOTL</li>
+<li>Obstacles for Agility Pyramid entrance and Morytania pirate ship have been added to Agility plugin</li>
+<li>Al-Kharid lap counter has been fixed</li>
+<li>XP tracker now shows dots instead of commas to follow OSRS style of displaying numbers</li>
+<li>Fishing plugin now supports all types of eels</li>
+<li>Bug with inventory tagger plugin showing items with different models depending on the quantity
+incorrectly have been fixed</li>
+</ul>
+<p>Enjoy!</p>
+<p>~ Tomas</p>
+<h3 id="new-commits">New commits</h3>
+<p>We had 15 contributors this release!</p>
+<pre><code>Adam (8):
+      runelite-api: make HashTable a generic
+      Calculate and store widget parent id and position when the interfaces are rendered
+      Revert "Add ironman status and AccountType to API"
+      chat commands: fix to use exiting accounttype api
+      agility plugin: fix Al Kharid lap counter
+      puzzle solver: add lightbox solver
+      chat commands: store kill counts in config
+      Change Widget::parentId behavior to work again if the widget hasn't been drawn yet
+
+Damen (2):
+      Fix Dark Crab req lvl in skill calculator (#4071)
+      Prevent cannonball count conflicting with health bars (#2857)
+
+Gamer1120 (1):
+      Fix hiscore lookup for ironman in chat commands
+
+JHPinto (1):
+      slayer plugin: move item count overlay checks to render
+
+Jeremy Plsek (2):
+      item manager: add item outline caching
+      inventory tags: use item manager for outlines
+
+Jordan (1):
+      Ignore level goals which have been passed (#3805)
+
+Jordan Atwood (17):
+      item stats plugin: Add Edible seaweed
+      chat color: Fix description typo
+      Update Veng Other / Energy Transfer animation ID
+      Add Vengeance Other graphic ID
+      timers plugin: Check for Vengeance Other graphic
+      item stats: Add missing RFD foods
+      fishing plugin: Add cave eel and slimy eel spots
+      agility plugin: Add Lumbridge swamp cave shortcuts
+      item stats plugin: Add field ration
+      grand exchange plugin: Fix error message typos
+      grand exchange plugin: Clear render on empty string
+      item stats plugin: Fix import ordering
+      item stats plugin: Fix Zamorak brew stat changes
+      skill calculator: Fix combined items with decimals
+      item stats: Add negative attack bonus to wines
+      clues: Fix Cap'n Izzy No-Beard anagram clue
+      agility plugin: Add pyramid entrance obstacles
+
+Kamiel (1):
+      screen-markers: fix graphical bug
+
+Magic fTail (1):
+      AgilityPlugin: Add obstacles north of pirate ship (#4084)
+
+Max Weber (3):
+      mixins: Don't show siblings in dynamic widget's child lists
+      farmingtracker: Correct several patch timings
+      itemstats: Add variable healing food
+
+Nathen Sample (1):
+      Represent decimals as .'s not ,'s (#4059)
+
+PandahRS (5):
+      Make skilling activity configurable in Discord
+      Add bosses to Discord plugin
+      Add cities to Discord plugin
+      Add dungeons to discord plugin
+      Add minigames to Discord plugin
+
+Tomas Slusny (7):
+      Add ironman status and AccountType to API
+      Make SOTD/SOTL timer use chat messsage
+      Return preferredSize.width from TitleComponent
+      Make !clues command respect account type
+      Add logging of presence to DiscordService
+      Make Discord plugin more extensible/support region
+      Reset Discord state if now &gt; updated + timeout
+
+Viktor Horsmanheimo (2):
+      Add widget IDs for the varrock museum quiz
+      Add Varrock museum quiz solver
+
+takuyakanbr (5):
+      Add description and tags fields to PluginDescriptor
+      config panel: change plugin search to use plugin name + tags
+      config panel: add ability to pin plugins to the top
+      config panel: keep search bar at the top while scrolling Add back and toggle buttons at the top of plugin configuration pages
+      Replace fields in ConfigGroup with a single `value` field
+</code></pre></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a></div></div></div></div><script type="text/javascript" src="/static/js/main.6904bbc0.js"></script></body></html>

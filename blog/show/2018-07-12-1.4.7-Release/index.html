@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.4.7 Release - RuneLite</title><meta name="description" content="Kill count command, prayer bars, and Tears of Guthix plugin"><meta name="author" content="Adam"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/main.a6c4659c.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" async="" src="/static/js/2.a12c216e.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="/static/js/18.8fbbb003.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="Logo"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U"><i class="fab fa-discord"></i> Discord</a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient"><i class="fab fa-twitter"></i> Twitter</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite"><i class="fab fa-github"></i> GitHub</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li></ul></div></nav><div class="container" id="layout"><h1>1.4.7 Release</h1><p class="text-muted">2 months ago by Adam</p><hr><div class="markdown-body"><p>A kill count command was added which can share your kill count with other
+players who are also using RuneLite. The client must first observe you
+getting a kill count message to record the kill count. It can not read
+the kill counts off of the boss log in game yet, but maybe that will come soon.</p>
+<p>Note that as the kill count data is sent from the client it is trusted and is not
+difficult for someone to fake.</p>
+<p><img src="/img/blog/1.4.7-Release/kc.png" alt="kc"></p>
+<p>The prayer plugin now can show a prayer bar, below your hitpoints bar, showing
+how much prayer you have left.</p>
+<p><img src="/img/blog/1.4.7-Release/prayerbar.png" alt="prayerbar"></p>
+<p>A Tears of Guthix plugin was added which displays time remaining on the blue streams:</p>
+<p><img src="/img/blog/1.4.7-Release/tog.png" alt="tog"></p>
+<p>The special attack orb now indicates when you have special attack enabled.</p>
+<p><img src="/img/blog/1.4.7-Release/specorb.gif" alt="specorb"></p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>Add broad arrows to the fletching skill calculator</li>
+<li>XP drop plugin will now center text of XP if skill icons are hidden</li>
+<li>Fix agility plugin counting laps on the agility pyramid</li>
+<li>The runecraft plugin can now send a notification when rune pouches degrade</li>
+</ul>
+<p>Enjoy!</p>
+<p>- Adam</p>
+<h3 id="new-commits">New commits</h3>
+<pre><code>Adam (12):
+      slayer plugin: don't lowercase task names
+      slayer plugin: add spiritual creatures, and fix a few other tasks
+      slayer plugin: move target highlight building to use events
+      Add killcount command
+      Add getVarpValue and setVarpValue to RSClientMixin and Client
+      runecraft plugin: add positions for config options
+      runelite-scripts: check length check in chatbox input
+      runelite-client: add immediate event bus
+      chat commands: fix kc command in friends chat
+      plugin manager: register plugins with immediate event bus
+      command manager: post events to immediate eventbus
+      widgetid: update barrows interface ids
+
+Forsco (1):
+      Add broad arrows to fletching skill calc
+
+Infinitay (2):
+      Add "getvarp", "setvarp", "getvarb", "setvarb" dev-tool chat commands
+      Add stream progress overlay for Tears of Guthix
+
+Isha Dijcks (1):
+      runecraft plugin: add a notification when a runepouch degrades
+
+Jordan Atwood (9):
+      clues: Fix SW-of-deserted-keep hot-cold location
+      xp drop plugin: Move text to use hidden icon's space
+      xp tracker plugin: Reduce visibilities
+      xp tracker plugin: Remove WorldClient usages
+      agility plugin: Remove unused variables and imports
+      agility plugin: Reduce visibility of classes
+      agility plugin: Fix course spellings
+      agility plugin: Check for endpoints only when defined
+      agility plugin: Add pyramid end point
+
+Nathen Sample (1):
+      Add prayer bonus for suffering R and RI
+
+Oliver Atkinson (1):
+      Fix #4101 - Add swap options for Decant
+
+Tomas Slusny (11):
+      Rename prayer tooltip option
+      Add prayer bar to prayer plugin
+      Add api mappings for oculus orb normal speed
+      Set oculus speed to 36 (x3) in DevTools
+      Add spec active indicator to spec orb
+      Do not explode on illegal unicode chat in settings
+      Fix "verxik" typo in ChatCommandsPlugin
+      Add more !kc abbreviations
+      Check if infobox can render in InfoBoxOverlay
+      Add debuff/buff change indicators
+      Add support for preserving boost indicators
+</code></pre></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a></div></div></div></div><script type="text/javascript" src="/static/js/main.6904bbc0.js"></script></body></html>

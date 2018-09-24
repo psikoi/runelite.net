@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.4.5 Release - RuneLite</title><meta name="description" content="Inventory tags, opponent comparison, inventory viewer, and corporeal beast plugin"><meta name="author" content="Adam"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/main.a6c4659c.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" async="" src="/static/js/2.a12c216e.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="/static/js/20.3bc1ce83.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="Logo"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U"><i class="fab fa-discord"></i> Discord</a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient"><i class="fab fa-twitter"></i> Twitter</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite"><i class="fab fa-github"></i> GitHub</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li></ul></div></nav><div class="container" id="layout"><h1>1.4.5 Release</h1><p class="text-muted">3 months ago by Adam</p><hr><div class="markdown-body"><p>An inventory tag plugin was added which lets you tag items in your inventory,
+which then get outlined a specific color. Contributed by
+<a href="https://github.com/kulershk">@kulers</a>.</p>
+<p><img src="/img/blog/1.4.5-Release/inventorytags.png" alt="inventorytags"></p>
+<p>The opponent info plugin now has an option to show and compare the stats of an
+opponent you interact with. Contributed by
+<a href="https://github.com/nightfirecat">@Nightfirecat</a>.</p>
+<p><img src="/img/blog/1.4.5-Release/playercomparison.png" alt="playercomparison"></p>
+<p>An inventory viewer was added by <a href="https://github.com/jplsek">@jplsek</a> which lets
+you overlay a view of your inventory:</p>
+<p><img src="/img/blog/1.4.5-Release/inventoryviewer.png" alt="inventoryviewer"></p>
+<p>Finally, a corporeal beast plugin was added:</p>
+<p><img src="/img/blog/1.4.5-Release/corp.png" alt="corp"></p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>Fix animation smoother with interpolating rotation frames</li>
+<li>Fix animation smoother to not smooth hellhound defence animation</li>
+<li>Fix agility plugin to not reset arena timer when falling from obstacles</li>
+<li>Fix fight cave plugin to work more reliably</li>
+<li>Fix price of tentacle tridents</li>
+<li>Add informative dialog for when the client is outdated due to game updates</li>
+<li>Add configuration setting for chat commands clear chat keyboard shortcuts</li>
+<li>The screenshot plugin now has a configurable hotkey for screenshots</li>
+<li>Add Battle staffs to the idle notifier</li>
+<li>Add !clues chat command</li>
+<li>Add timer for stamina mixes</li>
+<li>Add (slayer) assignment to menu swapper</li>
+<li>Fix binding necklaces charges to reset when the necklace is destroyed</li>
+</ul>
+<p>Enjoy!</p>
+<p>- Adam</p>
+<h3 id="new-commits">New commits</h3>
+<pre><code>AWPH-I (1):
+      Add inventory viewer plugin
+
+Adam (20):
+      runelite-client: add outdated dialog
+      runescape-api: remove no longer used annotations
+      Add logback-parent to dependency management and use a consistent slf4j version everywhere
+      Add interface representing all callbacks the client does, and convert mixins to use it
+      hooks: dispose graphics after using
+      actor mixin: fix getInteracting when index is 65535
+      Add interacting changed event
+      chat message manager: set default colors for GAME messages
+      Add corporeal beast plugin
+      modelviewer: add basic animation support
+      devtools: add transform command
+      animation smoothing: do not interpolate to angle 0
+      Revert "animation smoothing: do not interpolate to angle 0"
+      animation smoothing: don't interpolate hellhound defence animation
+      chat commands: add config setting for chat clear shortcuts
+      cache: rename additional npc definition fields
+      queries: replace some isHidden checks with isSelfHidden
+      hiscore client: check response code of hiscore lookups
+      opponent info: move interacting logic to plugin and use interacting changed event
+      opponent info: add player comparison overlay
+
+Dennis (1):
+      animation smoothing: fix angle bounds for rotation
+
+HSJ-OSRS (2):
+      Add battlestaff crafting to AnimationID
+      Add battlestaff crafting to idle notifier
+
+James (1):
+      Show correct text for master clue command (#3989)
+
+JavaLeg (1):
+      chat commands: add clues command
+
+Jordan Atwood (3):
+      Fix "West of Barbarian Village" hot-cold location
+      Fix East of Brimhaven fruit tree hot-cold location
+      timers plugin: Create timer for stamina mixes
+
+Kamiel (1):
+      npc indicators: fix consuming tag menu clicks on non-npcs
+
+Max Weber (4):
+      runelite-client: Add Keybind class for configs to save and set hotkeys
+      screenshot plugin: Allow hotkey to be changed from insert
+      kourendlibrary: Make hiding the navbutton optional
+      runelite-client: Add a equals implementation to Keybind
+
+Nathen (1):
+      Update library plugin encapsulation
+
+Nathen Sample (1):
+      Update prayer plugin encapsulation (#3962)
+
+ScottMCarr (1):
+      agility plugin: do not update arena timer when there is no hint arrow
+
+Su-Shing Chen (1):
+      agilityShortcutLocation: Fix SE Karamja agility marker
+
+Tomas Slusny (24):
+      Center stretched fixed mode horizontally
+      Move onActorHitsplat to mixins
+      Move menuOpened to mixins
+      Move updateNpcs call to mixins
+      Move focusGained to mixins
+      Move focusLost to mixins
+      Move postItemComposition to mixins
+      Move setMessage to mixins
+      Move projectileMoved to mixins
+      Move addChatMessage to mixins
+      Move graphicsObjectCreated to mixins
+      Move drawAboveOverheads call to mixins
+      Move drawRegion call to mixins
+      Move clientMainLoop to mixins
+      Move menuActionHook to mixins
+      Add documentation for Hooks
+      Remove Age menu entry swapping
+      Move shift-click config to top of menu swapper
+      Update documentation for Callbacks interface
+      Add new toBufferedOutline method to SpritePixels
+      Add inventory tagging plugin
+      Remove title from corp panel
+      Make Fight Cave plugin more accurate
+      Fix price of tentacle tridents
+
+Trees (1):
+      Menu Swapper - Add Age/Assignment
+
+honeyhoney (2):
+      Added destroy item widgets
+      Fixed binding necklace charges not being reset when necklace is destroyed
+</code></pre></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a></div></div></div></div><script type="text/javascript" src="/static/js/main.6904bbc0.js"></script></body></html>
